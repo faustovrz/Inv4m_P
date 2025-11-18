@@ -329,376 +329,162 @@ This interaction pattern indicates that phosphorus deficiency not only triggers 
 
 % Our multi-omics analysis demonstrates that phosphorus starvation elicits a conserved molecular and phenotypic response in maize. Reduced growth, delayed flowering, and yield penalties were paralleled by transcriptomic activation of phosphate scavenging and recycling pathways, lipid remodeling, and nutrient redistribution. Importantly, these responses were consistent across genotypes differing at the \invfour inversion. Nonetheless, we identified a small set of genotype-by-phosphorus interactions exceeding significance thresholds. In transcriptomics, these outliers overlapped with loci previously associated with flowering time and plant height. In lipidomics, phosphatidylethanolamine remodeling showed genotype specificity. Such secondary GxE effects suggest that while the phosphorus starvation program is globally robust, specific genetic variants can modulate its fine-scale execution.
 
-
 \section{Discussion}
-%(todo: Fausto) El primer parafo de la discusion debber retomar la driving hypothesis, repasar contecto general revisa el paper de hpc1, 2 teosintes.
-
-Our multi-omics analysis reveals that the maize phosphorus starvation response increases monotonically in the sampled internodes below the collar, with older leaves experiencing compounded stress that integrates both nutrient limitation and natural senescence programs.
-While phosphorus deficiency triggered canonical molecular and phenotypic responses across genotypes, the magnitude and character of these responses depended on leaf developmental stage, with the \invfour chromosomal inversion showing minimal modulation of these developmental interactions.
-
-\subsection*{Phosphorus Stress Accelerates Developmental Senescence in an Age-Dependent Manner}
-Our experimental design, treating leaf stage as a continuous numerical variable in the statistical model, was specifically structured to detect linear changes in phosphorus response across the developmental gradient.
-Under phosphorus-sufficient conditions, we observed the expected developmental gradient: photosynthetic capacity, measured through chlorophyll synthesis gene expression, declined progressively from young to old leaves, while senescence markers increased correspondingly (Fig.~\ref{fig:leaf_physiology_interaction}~A, B).
-Phosphorus deficiency did not simply shift this gradient uniformly across all leaf positions but rather amplified the divergence between anabolic and catabolic processes specifically in older leaves, creating a developmental acceleration that was largely absent in younger tissues (Fig.~\ref{fig:leaf_physiology_interaction}~D).
-Our sampling strategy, which targeted leaves with fully developed collars positioned below the apical meristem, allowed us to capture this monotonic developmental progression.
-This positional sampling was critical because senescence is not monotonically sequential in maize.
-Chlorophyll content exhibits a bell-shaped pattern across the leaf canopy, peaking around the collar leaf during vegetative stages \cite{ciganda2008} and at the ear leaf during reproductive stages \cite{ciganda2008,wei2025}, with bilateral decreases in both younger (above) and older (below) positions.
-Similarly, other physiological traits including water content \cite{gao2023}, leaf area, leaf longevity, leaf area duration \cite{authorYEAR}, and leaf nitrogen content \cite{authorYEAR} show bilateral declines from a maximum at the ear leaf.
-By restricting our sampling to internodes below the collar at the V10-V12 vegetative stage, we captured the monotonically declining phase of the developmental gradient.
-Had we sampled leaves above the collar, we would have encountered the ascending phase of the bell curve, where younger leaves show increasing photosynthetic capacity.
-Thus, our observed linear interaction between leaf stage and phosphorus availability reflects the fortunate alignment of our sampling strategy with the specific developmental window where senescence-related traits decline monotonically with increasing leaf age.
-
-This pattern manifested across multiple molecular levels.
-At the transcriptomic level, 487 genes showed significant leaf stage by phosphorus interactions (Fig.~\ref{fig:leaf_physiology_interaction}~C), representing pathways involved in chlorophyll metabolism, photosynthetic electron transport, and nutrient remobilization.
-Gene Ontology enrichment analysis revealed that these interaction genes are not randomly distributed across cellular functions but rather concentrate in specific biological processes (Fig.~\ref{fig:erichment}).
-Genes downregulated with the leaf $\times$ phosphorus interaction are enriched for photosynthesis, light harvesting complex, and leaf morphogenesis, while upregulated genes are enriched for phosphate starvation response, galactolipid biosynthesis, and phosphate homeostasis.
-These enrichment patterns align with previous work by He et al.(2021), who used weighted gene co-expression network analysis (WGCNA) to identify coordinated modules of proteins and transcripts responding to phosphorus limitation in maize roots and shoots.
-Critically, they found that certain metabolic processes such as carbohydrate metabolism, glycolysis, and lipid metabolism show strong concordant regulation at both mRNA and protein levels, whereas ribosome biogenesis and the ubiquitin-proteasome system respond primarily through protein abundance changes without corresponding mRNA shifts.
-Our leaf-age-dependent phosphorus responses fit within this multi-layered regulatory framework.
-The galactolipid biosynthesis genes we identified as enriched in the positive interaction set correspond to He et al.'s finding that sulfolipid and galactolipid biosynthesis genes are among the core conserved responses to phosphorus limitation, showing upregulation at both transcriptional and translational levels across diverse maize genotypes.
-Similarly, our observation that photosynthesis genes show age-dependent downregulation parallels their identification of photosynthetic modules that decrease in abundance under low phosphate, though their bulk-tissue analysis could not resolve the developmental gradient we now document.
-
-Critically, the 487 interaction genes partition into two distinct trajectories with divergent biological meanings (Fig.~\ref{fig:leaf_physiology_interaction}~E).
-Genes with negative interaction terms exhibit a switch in the sign of phosphorus-deficiency responses in older leaves compared to the CTRL lines, with an increase in magnitude.
-This trajectory corresponds to the shutdown of the light-dependent photosynthetic apparatus.
-KEGG pathway enrichment analysis confirms that in these interaction genes, there is overrepresentation of light-harvesting complex genes, and simultaneously a lack of overrepresentation from Calvin cycle pathways.
-Representative genes with negative interactions include chlorophyll a-b binding proteins and glutamine dumper 3 (Fig.~\ref{fig:leaf_physiology_interaction}~F, lower panels), consistent with the coordinated dismantling of thylakoid light-capture machinery while preserving stromal carbon fixation capacity.
-This selective shutdown parallels findings in other systems where phosphorus limitation specifically targets ATP-dependent processes in the thylakoid membrane while alternative bypass pathways maintain carbon assimilation.
-
-Conversely, genes with positive interaction terms show amplified phosphorus-starvation responses in older leaves, corresponding to induced senescence rather than natural developmental senescence.
-These genes include pyruvate kinase and Tat pathway signal sequence family proteins (Fig.~\ref{fig:leaf_physiology_interaction}~F, upper panels), both of which are associated with enhanced metabolic flux toward nutrient remobilization and export.
-The GO enrichment for this positive interaction set includes amino acid transport, aging, and detoxification processes, supporting their role in accelerated senescence programs.
-This bifurcation into light-harvesting shutdown versus senescence induction reveals that phosphorus deficiency does not impose a single, unified response, but rather modulates distinct regulatory programs depending on the developmental context.
-
-The two trajectories we observe provide a finer-grained view of the coordinated responses identified through transcript and lipid analyses.
-He et al. (2021) demonstrated that phosphorus limitation triggers coordinated changes across multiple functional modules: a proteome module enriched for acid phosphatases, phenylalanine ammonia lyase, and bypass pathway enzymes showed strong positive correlation with improved phosphorus use efficiency, while modules enriched for oxidative pentose phosphate pathway proteins showed negative correlations with tissue phosphorus content.
-Our finding that interaction genes partition into functionally distinct trajectories suggests that these system-wide coordination patterns are further modulated by developmental age, with older leaves amplifying gene expression for certain processes (such as senescence and nutrient remobilization) while increasingly repressing others (including light-dependent photosynthesis reactions).
-Moreover, the limited correlation between transcriptomic and proteomic responses documented by He et al.(2021) may help explain why our transcriptomic interaction patterns are so clear: genes whose regulation occurs primarily at the protein stability or translation level would not appear in our differential expression analysis, potentially enriching our interaction gene set for those under strong transcriptional control.
-The fact that ribosome biogenesis responds to phosphorus limitation primarily through changes in protein abundance without shifts in mRNA levels is consistent with our observation that older leaves, which have reduced growth demands, can more readily downregulate the translation machinery as part of the senescence acceleration program.
-
-The lipidomic data reinforced this developmental stratification and aligned with previous reports of phosphorus-starvation lipid remodeling.
-Phosphatidylcholine PC34:2, a major membrane phospholipid, showed both a strong main effect of phosphorus deficiency ($\log_2\text{FC}=-1.60 \pm 0.08$, $\text{FDR}=1.58 \times 10^{-5}$) and a significant interaction with leaf stage ($\log_2\text{FC}=-0.56 \pm 0.04$, $\text{FDR}=0.0014$, Fig.~\ref{fig:volcano_multiomics}).
-While all leaves exhibited reduced PC34:2 under low phosphorus conditions, the magnitude of this reduction increased systematically with leaf age, suggesting that older leaves prioritize phospholipid catabolism more aggressively than younger leaves.
-
-However, our age-resolved approach reveals nuances that are obscured in bulk-tissue measurements.
-While Wang et al. (2020) reported overall increases in MGDG and DGDG molar percentages in leaf tissues, we find that these shifts are not uniform across leaf developmental stages but rather concentrated in older leaves, where phospholipid depletion and galactolipid accumulation are most pronounced.
-At the lipid species level, we observe dramatic reductions in phosphatidylcholines that align with Wang et al.'s findings: PC34:2 ($\log_2\text{FC}=-1.60$, $\text{FDR}=1.58 \times 10^{-5}$) and PC32:2 ($\log_2\text{FC}=-2.58$) show strong depletion under phosphorus deficiency, consistent with their report of decreased PC molar percentages in leaves.
-
-The reduction in PC34:2 is particularly noteworthy given its established binding to ZCN8, the maize florigen ortholog.
-We previously demonstrated that PC34:2 copurifies with recombinant ZCN8 protein, confirming direct lipid-protein interaction, and identified probable binding sites through molecular docking simulations (Barnes et al., 2022).
-Additionally, we demonstrated that phospholipase HPC1 expression, which influences PC34:2 levels, is correlated with flowering-time variation across the maize diversity panel, with association magnitudes comparable to those of canonical flowering genes, such as ZCN8 and ZmRAP2.7.
-While a causal role for PC34:2 in flowering-time control remains to be established, the depletion of PC34:2 under phosphorus deficiency in our study, combined with the age-dependent interaction term ($\log_2\text{FC}=-0.56$ for Leaf x -P interaction), raises the possibility that phosphorus stress may influence reproductive timing not only through resource limitation but also through altered availability of lipid species that interact with flowering regulatory proteins.
-
-Across both genotypes, phosphorus deficiency delayed anthesis by 3.6 days ($p = 2.3 \times 10^{-20}$) and silking by 3.4 days ($p = 5.7 \times 10^{-22}$).
-While this delay likely reflects primarily the time required to accumulate sufficient resources through enhanced nutrient remobilization from senescing leaves, the specific depletion of PC34:2—a lipid species demonstrated to bind ZCN8—suggests a plausible additional mechanism.
-If ZCN8 florigen activity or stability is modulated by PC34:2 binding, as has been shown in \textit{Arabidopsis} FT interactions with PG in temperature- and location-dependent contexts, then the systematic depletion of this specific phospholipid species could potentially impair florigen signaling.
-
-This correlation between PC34:2 depletion and flowering delay is reinforced by the coordinated downregulation of flowering-time genes with leaf age in our dataset.
-The MADS-box transcription factors \textit{zmm4} (Zm00001eb057540, $\log_2\text{FC}=-3.40$, $-\log_{10}\text{FDR}=7.10$) and \textit{zmm15} (Zm00001eb214750, $\log_2\text{FC}=-5.04$, $-\log_{10}\text{FDR}=5.13$) are among the most strongly downregulated genes with increasing leaf age, consistent with the natural progression from vegetative to reproductive phase transitions that matches our sampling time.
-
-Similarly, we detect significant reductions in phosphatidylethanolamines (PE34:4, $\log_2\text{FC}=-2.06$; PE34:3, $\log_2\text{FC}=-2.20$) and lysophospholipids (LPE18:2, $\log_2\text{FC}=-2.69$; LPC16:1, $\log_2\text{FC}=-3.50$; LPC18:3, $\log_2\text{FC}=-2.64$), matching Wang et al.'s observed decreases in PE, LPE, and LPC classes.
-
-The behavior of lysophosphatidylethanolamines (LPEs) in our dataset diverges from the previously reported pattern in dicotyledonous species, and this divergence extends to the transcriptional regulation of phosphatidylethanolamine biosynthesis.
-In horticultural crops, exogenous LPE application delays leaf senescence through inhibition of phospholipase D (PLD), thereby preserving membrane integrity and reducing ethylene production (Amaro and Almeida, 2013).
-LPE-treated tomato and pepper leaves maintain higher chlorophyll content, reduced electrolyte leakage, and delayed senescence markers compared to untreated controls (Farag and Palta, 1991b; Kang et al., 2003).
-This senescence-suppressing role positions LPE as a protective agent in dicots, where its accumulation would be expected to correlate with membrane preservation and delayed aging.
-
-Our maize data present the opposite pattern at both the metabolite and transcript levels.
-Under phosphorus deficiency, we observe dramatic reductions in multiple LPE species: LPE18:2 ($\log_2\text{FC}=-2.69 \pm 0.46$, $\text{FDR}=7.39 \times 10^{-5}$), LPE18:3 ($\log_2\text{FC}=-2.02 \pm 0.66$, $\text{FDR}=0.022$), and LPE16:0 ($\log_2\text{FC}=-1.86 \pm 0.70$, $\text{FDR}=0.042$).
-More strikingly, LPE18:3 shows a positive association with leaf developmental stage ($\log_2\text{FC}=1.32 \pm 0.30$, $\text{FDR}=0.0036$), indicating that LPE accumulation increases as leaves progress toward senescence under our experimental conditions.
-This developmental trajectory is precisely the inverse of what would be predicted if LPE functioned as a senescence suppressor in maize as it does in dicots.
-
-The lipidomic pattern is paralleled by coordinated transcriptional suppression of phosphatidylcholine biosynthesis.
-The dramatic downregulation of phosphoethanolamine N-methyltransferase 2 (peamt2/XIPOTL1, Zm00001eb294690, $\log_2\text{FC}=-6.81 \pm 0.53$, $\text{FDR}=4.93 \times 10^{-5}$) represents one of the strongest transcriptional responses to phosphorus deficiency in our entire dataset.
-This enzyme catalyzes the sequential methylation of phosphoethanolamine to phosphocholine in the Kennedy pathway for PC biosynthesis (Cruz-Ramírez et al., 2004), and its severe suppression indicates a systemic shutdown of PC synthesis from PE-derived precursors.
-The ortholog in Arabidopsis, XIPOTL1, has been implicated in developmental timing, with mutations causing pleiotropic effects on flowering time, root architecture, and stress responses (Cruz-Ramírez et al., 2004).
-In maize, we have found that natural variation at the peamt2 locus is associated with flowering time in Mexican highland populations (Pérez-Limón et al., 2022; Barnes et al., 2021), suggesting that modulation of phospholipid biosynthesis may contribute to adaptive variation in developmental timing under environmental stress.
-
-The coordinate suppression of peamt2 and depletion of both PC and LPE species indicates that maize prioritizes phosphorus conservation over maintenance of phospholipid biosynthetic capacity during nutrient limitation. This strategy contrasts sharply with approaches that might attempt to maintain membrane integrity through sustained phospholipid synthesis.
-Instead, the data support active phospholipid catabolism as the dominant metabolic strategy. This interpretation is reinforced by the upregulation of phospholipase genes in our dataset: phospholipase C6 (\textit{plc6}, \textit{Zm00001eb063230}) shows both a main phosphorus effect and a positive leaf × phosphorus interaction ($\log_2\text{FC}=0.56 \pm 0.04$, $\text{FDR}=2.82 \times 10^{-5}$), indicating enhanced phospholipid hydrolysis specifically in older leaves under phosphorus stress. 
-Similarly, \textit{phospholipase D16} (\textit{pld16}, Zm00001eb339870) exhibits a positive leaf × phosphorus interaction ($\log_2\text{FC}=0.56 \pm 0.04$, $\text{FDR}=4.85 \times 10^{-5}$), confirming that phospholipid degradation is developmentally amplified under nutrient limitation.
-
-Lysophosphatidylethanolamine acyltransferase 2 (lpeat2, \textit{Zm00001eb227780}), which catalyzes the conversion of lysophosphatidylethanolamine to phosphatidylethanolamine in the Kennedy pathway (Gou et al., 2017), shows no significant differential expression under our experimental conditions, suggesting that PE synthesis from LPE is not actively modulated during phosphorus stress.
-Similarly, choline/ethanolamine kinase 4 (\textit{cek4}, \textit{Zm00001eb313980}), which phosphorylates ethanolamine to phosphoethanolamine in the first committed step of PE biosynthesis via the CDP-ethanolamine pathway, is absent from our high-confidence differential expression set, indicating constitutive rather than stress-responsive regulation.
-
-The coordination between PE depletion, peamt2 suppression, and phospholipase upregulation reveals a metabolic strategy distinct from the dicot pattern.
-The severe downregulation of XIPOTL1/peamt2 might effectively block the conversion of PE-derived phosphoethanolamine into PC, forcing the plant to rely on existing PC pools while simultaneously catabolizing them to recover phosphorus.
-Wang et al. (2020) demonstrated that maize responds to phosphorus limitation by systematically replacing phosphorus-containing membrane lipids with galactolipids, a process that requires the efficient degradation of existing phospholipids to liberate diacylglycerol for galactolipid biosynthesis.
-Within this framework, LPE represents not a regulatory signal but rather a transient intermediate in the phosphorus salvage pathway. 
-The fact that LPE levels decline rather than accumulate during phosphorus stress suggests highly efficient conversion of LPE to downstream products, either through complete degradation to release phosphate or through rapid acylation back to PE for subsequent hydrolysis by other phospholipases.
-
-The functional link between peamt2/XIPOTL1 expression and flowering time (Pérez-Limón et al., 2022; Barnes et al., 2022) provides an additional layer of interpretation for the delayed flowering we observe under phosphorus deficiency. The balance between PC and its precursors has been demonstrated to influence flowering time in Arabidopsis (Nakamura et al., 2014), with perturbations in phospholipid metabolism affecting the timing of reproductive transitions. The dramatic suppression of peamt2 under phosphorus limitation, combined with the depletion of PC34:2—a phospholipid species that binds to the maize florigen ZCN8 (Barnes et al., 2022)—suggests that phosphorus stress may delay flowering through both direct resource limitation and indirect modulation of lipid-mediated signaling pathways. 
-
-The positive association between LPE18:3 and leaf stage further challenges a simple regulatory interpretation.
-If LPE were a senescence suppressor in maize, we would expect its levels to decline as leaves age and senesce, paralleling the pattern observed when exogenous LPE delays senescence in dicots.
-Instead, the age-dependent increase in LPE18:3 suggests it may serve as a senescence marker in maize rather than a senescence modulator.
-This interpretation aligns with the broader lipidomic context: older leaves under phosphorus stress show enhanced phospholipid degradation (as evidenced by the PC34:2 interaction term) and increased TAG accumulation, consistent with accelerated nutrient remobilization.
-LPE18:3 accumulation in older leaves may simply reflect the residual products of this enhanced catabolic activity, with 18:3-containing species being preferentially retained due to their structural properties or metabolic recalcitrance.
-
-The mechanistic basis for this divergence between maize and dicots may reflect fundamental differences in membrane lipid metabolism between monocots and dicots.
-Maize, as an 18:3 plant, relies predominantly on the eukaryotic (ER-localized) pathway for galactolipid synthesis (Wang et al., 2020), whereas many dicots also utilize the prokaryotic (plastid-localized) pathway.
-This difference in lipid biosynthetic architecture may alter the metabolic fate of lysophospholipid intermediates.
-In the eukaryotic pathway, diacylglycerol derived from phospholipid degradation is transported to the chloroplast outer envelope for galactolipid synthesis, creating a direct metabolic flux from PE → LPE → DAG → MGDG.
-The efficiency of this pathway, particularly when PC biosynthesis is blocked by \textit{peamt2} suppression, may preclude LPE accumulation, as the lipid is rapidly consumed in downstream reactions.
-
-Critically, all studies demonstrating LPE senescence-suppressing effects have employed exogenous application of LPE to plant tissues, often at supra-physiological concentrations (50–200 mg/L).
-These experiments reveal that external LPE can influence senescence pathways when supplied at high levels, but they do not necessarily demonstrate that endogenous LPE fluctuations serve this regulatory function under natural conditions.
-Our data, which measure endogenous LPE levels under phosphorus stress, may better reflect the actual metabolic role of these lipids in unstressed tissues.
-The depletion of LPEs we observe under phosphorus limitation is consistent with their metabolic consumption as part of the phosphorus salvage pathway, rather than their accumulation as regulatory signals.
-
-This contrast highlights the importance of considering phylogenetic context when interpreting lipid signaling mechanisms.
-The senescence-regulatory role of LPE, established primarily in horticultural dicots through exogenous application experiments, does not appear to operate in monocots like maize, where membrane remodeling during phosphorus stress follows alternative biochemical strategies prioritizing efficient phosphorus recycling over membrane preservation. The severe suppression of XIPOTL1/peamt2, representing one of the strongest transcriptional responses to phosphorus deficiency in our dataset, exemplifies this prioritization: rather than maintaining phospholipid biosynthetic capacity, maize systematically dismantles the machinery for PC synthesis, ensuring that available phosphorus is redirected toward essential nucleic acid and ATP synthesis while membrane function is maintained through phosphorus-free galactolipids.
-
-The reduction in phosphatidylglycerol species (PG32:0, $\log_2\text{FC}=-1.61$; PG34:3, $\log_2\text{FC}=-3.83$) further validates the membrane remodeling response documented by Wang et al.
-Conversely, our detection of substantial triacylglycerol accumulation (TG50:3, $\log_2\text{FC}=3.36$; TG52:6, $\log_2\text{FC}=2.63$; TG54:9, $\log_2\text{FC}=2.25$; TG56:6, $\log_2\text{FC}=12.71$) extends Wang et al.'s observations by revealing which fatty acid combinations are preferentially stored.
-The particularly striking accumulation of TG56:6, with a fold-change exceeding 6000-fold, suggests that certain very-long-chain polyunsaturated TAG species may serve specialized roles in temporary lipid storage during membrane remodeling.
-The fatty acid composition of these accumulated TAGs—particularly the enrichment of polyunsaturated species containing 18:3 fatty acids—directly matches the molecular species being depleted from phospholipids, most notably PC36:6 and LPC18:3.
-This compositional correspondence suggests efficient metabolic channeling from membrane phospholipids to storage lipids during phosphorus stress.
-
-The mechanism underlying this metabolic flux may involve phospholipid:diacylglycerol acyltransferase (PDAT), which catalyzes the direct transfer of acyl groups from phospholipids to diacylglycerol to form triacylglycerols, providing an alternative pathway to diacylglycerol acyltransferase (DGAT) for TAG synthesis.
-Among the four annotated maize PDAT1 genes (\textit{Zm00001eb314300}, \textit{Zm00001eb342120}, \textit{Zm00001eb118700}, and \textit{Zm00001eb100310}), only \textit{Zm00001eb100310} showed a statistically significant response to leaf age ($\beta=0.103$ per leaf stage, $\text{FDR}=9.40 \times 10^{-6}$), with this upregulation slightly enhanced under phosphorus deficiency ($\beta=0.102$ for the leaf $\times$ phosphorus interaction, $\text{FDR}=0.019$).
-The remaining PDAT genes showed no significant differential expression.
-However, the magnitude of the \textit{Zm00001eb100310} response falls well below our high-confidence threshold ($|\beta| > 0.5$), representing only a 1.22-fold change across the full leaf developmental gradient (2$^{0.103 \times 3}$ = 1.22).
-This weak transcriptional response suggests that PDAT-mediated TAG synthesis operates primarily through constitutive enzyme activity, substrate availability, or post-translational regulation rather than through transcriptional induction.
-This interpretation aligns with He et al. (2021), who demonstrated that many lipid metabolism enzymes respond to phosphorus limitation primarily through changes in protein abundance, substrate availability, or post-translational regulation without corresponding large-scale mRNA shifts.
-
-The PDAT pathway is particularly relevant for explaining the accumulation of highly unsaturated TAG species because it directly transfers intact acyl chains from phospholipids to diacylglycerol, preserving the fatty acid composition of the donor phospholipid.
-This contrasts with alternative pathways involving complete phospholipid degradation followed by de novo TAG synthesis, which would require re-desaturation of fatty acids and would be energetically expensive under phosphorus limitation.
-The coordinate depletion of PC36:6 ($\log_2\text{FC}$ for leaf stage effect = 0.77) and LPC18:3 ($\log_2\text{FC}$ for leaf stage effect = 1.51), coupled with the accumulation of TAGs enriched in 18:3-containing fatty acids (TG54:9, TG52:6), is consistent with PDAT-mediated direct transfer of polyunsaturated acyl chains from senescing phospholipid membranes into storage lipids.
-
-Wang et al. (2020) noted that TAG accumulation under phosphorus starvation likely represents transient storage for fatty acids released from membrane lipid catabolism, awaiting transport to younger tissues or conversion to energy via $\beta$-oxidation.
-The age-dependent amplification of this response in our dataset—where older leaves show enhanced TAG accumulation alongside more severe phospholipid depletion—supports this interpretation and suggests that PDAT-mediated lipid salvage may be particularly important in senescing tissues.
-By preserving the polyunsaturated fatty acids from membrane phospholipids in TAG form, the plant may maintain a pool of essential fatty acids that can be remobilized when needed, either for membrane repair in younger leaves or for energy metabolism during periods of carbon limitation.
-The fact that this metabolic strategy operates without significant transcriptional upregulation of PDAT genes indicates that the phospholipid-to-TAG flux is likely governed by substrate availability (increasing phospholipid degradation) and possibly by post-translational enzyme regulation rather than by increased PDAT gene expression.
-
-The enhanced accumulation of digalactosyldiacylglycerol (DGDG) under phosphorus deficiency confirms that the shift from phospholipids to galactolipids is a dominant feature of the maize phosphorus starvation response, directly paralleling Wang et al.'s reported increases in DGDG.
-Additionally, we detected significant accumulation of glucuronosyldiacylglycerol (DGGA36:4, $\log_2\text{FC}=1.57$, $\text{FDR}=0.018$), a phosphorus-free membrane lipid that has been documented in Arabidopsis, rice, tomato, and soybean as a component of the phosphorus starvation response.
-DGGA biosynthesis requires SQDG synthase activity, and Okazaki et al. (2015) demonstrated that DGGA accumulation represents an additional membrane lipid remodeling strategy beyond the canonical phospholipid-to-galactolipid shift, further reducing cellular phosphorus demand during nutrient limitation.
-The coordinate upregulation of galactolipids (DGDG) and glucuronide lipids (DGGA) in our dataset indicates that maize employs multiple parallel pathways to replace phosphorus-containing membrane lipids under deficiency conditions.
-
-At the gene expression level, our findings validate and extend the regulatory framework established by Wang et al. (2020).
-They identified three Type B galactolipid biosynthesis genes (\textit{ZmMGD2}, \textit{ZmMGD3}, and \textit{ZmDGD2}) as strongly upregulated under phosphorus starvation in both leaves and roots.
-We confirm robust upregulation of \textit{mgd2} (\textit{Zm00001eb034810}, $\log_2\text{FC}=4.83$, $-\log_{10}\text{FDR}=10.69$), which Wang et al.(2020) identified as the primary Type B MGDG synthase responsible for producing MGDG via the eukaryotic pathway under phosphorus limitation.
-This gene showed the highest expression induction in their study and represents the critical enzyme converting diacylglycerol to MGDG in the outer chloroplast envelope, initiating the galactolipid biosynthetic cascade.
-While we detect \textit{mgd1} (Zm00001eb313310, Type A) and \textit{mgd3} (Zm00001eb258130, Type B) in our transcriptome, neither shows differential expression at our significance threshold, suggesting that \textit{mgd2} is indeed the dominant responding isoform in leaves during phosphorus starvation, consistent with Wang et al.'s quantitative PCR results.
-
-For DGDG synthesis, Wang et al. reported upregulation of both Type A (\textit{ZmDGD1}) and Type B (\textit{ZmDGD2}) genes, with \textit{ZmDGD2} showing the stronger response.
-Although \textit{dgd2} (Zm00001eb243060) is present in our dataset, it does not reach our differential expression threshold, possibly due to differences in developmental timing (V10-V12 in our study versus their earlier sampling) or the sensitivity of RNA-seq versus qPCR.
-Wang et al. demonstrated that DGD2 preferentially uses MGDG generated by Type B MGD2/MGD3 to produce DGDG in the outer chloroplast envelope, suggesting a tightly coordinated enzymatic cascade where MGD2 upregulation may be sufficient to drive the pathway.
-
-The connection between sulfoquinovosyldiacylglycerol (SQDG) synthase and glucuronosyldiacylglycerol (DGGA) biosynthesis, as established by Okazaki et al. (2015), is directly validated by our coordinated transcriptomic and lipidomic results.
-We observe strong upregulation of both \textit{sqd1} (\textit{Zm00001eb347070}, $\log_2\text{FC}=1.76$, $\text{FDR}=9.0 \times 10^{-9}$) and \textit{sqd2} (\textit{Zm00001eb297970}, $\log_2\text{FC}=1.83$, $\text{FDR}=8.9 \times 10^{-9}$) under phosphorus deficiency, with an additional \textit{sqd2} paralog (\textit{Zm00001eb335670}) showing particularly robust induction ($\log_2\text{FC}=4.17$, $\text{FDR}=1.1 \times 10^{-8}$).
-These transcriptional responses are accompanied by age-dependent amplification: \textit{sqd2} shows high-confidence enhanced upregulation in older leaves under phosphorus stress ($\beta=0.53$, $\text{FDR}=0.00014$), while \textit{sqd1} exhibits a significant but more modest age-dependent response ($\beta=0.47$, $\text{FDR}=0.00035$).
-The coordinate induction of these enzymes directly supports DGGA biosynthesis: SQD1 catalyzes UDP-sulfoquinovose synthesis in the chloroplast stroma, while SQD2 transfers sulfoquinovose to diacylglycerol at the inner chloroplast envelope to generate SQDG, but importantly, SQD2 also possesses the catalytic activity required for DGGA synthesis.
-
-Okazaki et al. (2015) demonstrated that \textit{Arabidopsis} plants with mutations in \textit{SQD2}, but not \textit{SQD1}, fail to accumulate DGGA under phosphorus starvation, establishing SQD2 as the essential enzyme for DGGA biosynthesis despite its designation as an SQDG synthase.
-This apparent paradox is resolved by recognizing that SQD2 possesses broad substrate specificity, capable of transferring various sugar moieties to diacylglycerol depending on substrate availability and cellular context.
-Under phosphorus-replete conditions, when UDP-sulfoquinovose is abundant, SQD2 primarily synthesizes SQDG; however, under phosphorus limitation, alternative UDP-sugar substrates become favorable, leading to DGGA production.
-The coordinate upregulation of both SQD1 and SQD2 in our dataset, coupled with the accumulation of DGGA36:4 ($\log_2\text{FC}=1.57$, $\text{FDR}=0.018$), confirms that this phosphorus-sparing lipid strategy documented in Arabidopsis, rice, tomato, and soybean extends to maize and represents a conserved adaptation across diverse plant lineages.
-
-The age-dependent enhancement of \textit{sqd2} expression under phosphorus stress (with high-confidence $\beta=0.53$ exceeding our threshold) parallels the developmental pattern we observed for other membrane remodeling genes, suggesting coordinated regulation of multiple phosphorus-conserving pathways in senescing leaves.
-While Wang et al. (2020) reported \textit{SQD2} upregulation under phosphorus limitation in maize, they analyzed bulk tissue samples and did not resolve the age-dependent amplification we document here.
-The systematic increase in SQD enzyme expression with leaf age creates a metabolic environment increasingly favorable for DGGA synthesis in older leaves, where phosphorus salvage is most critical and where phospholipid catabolism provides abundant diacylglycerol substrates for glycolipid biosynthesis.
-The fact that DGGA36:4, rather than other DGGA species, shows the strongest accumulation may reflect substrate channeling from specific phospholipid degradation pathways or preferential incorporation of 36-carbon diacylglycerols into the DGGA biosynthetic route.
-
-This dual upregulation of galactolipid biosynthesis (MGDG/DGDG via MGD2) and glucuronide lipid biosynthesis (DGGA via SQD1/SQD2) reveals that maize employs parallel membrane remodeling strategies during phosphorus limitation, maximizing the replacement of phosphorus-containing lipids through multiple independent pathways that converge on the common goal of reducing cellular phosphorus demand while maintaining membrane integrity.
-
-Notably, we detect upregulation of phospholipid degradation enzymes that provide the diacylglycerol and phosphatidic acid substrates essential for galactolipid synthesis.
-The strong upregulation of \textit{gpx1} (Zm00001eb241920, glycerophosphodiester phosphodiesterase, $\log_2\text{FC}=6.48$, $-\log_{10}\text{FDR}=8.96$) indicates enhanced breakdown of glycerophosphodiesters to liberate glycerol-3-phosphate and facilitate phospholipid turnover.
-Multiple phospholipase genes show responses: \textit{plc6} (Zm00001eb063230, phospholipase C6) exhibits both main phosphorus effect and leaf $\times$ phosphorus interaction, suggesting developmental modulation of phosphatidylinositol-specific cleavage.
-
-Conversely, phospholipid biosynthesis is actively suppressed.
-The dramatic downregulation of \textit{peamt2} (Zm00001eb294690, phosphoethanolamine N-methyltransferase 2, $\log_2\text{FC}=-6.81$, $-\log_{10}\text{FDR}=4.93$) indicates reduced commitment to phosphatidylcholine synthesis via the Kennedy pathway, directly explaining the depletion of PC species we observe.
-This transcriptional suppression of phospholipid biosynthesis, combined with enhanced degradation, creates the net flux toward galactolipid accumulation that Wang et al.(2020) documented at the lipid level.
-
-Phosphatidic acid phosphatase genes that commit lipids to triacylglycerol synthesis show developmental interactions: \textit{pah1} (\textit{Zm00001eb289800}) exhibits positive leaf $\times$ phosphorus interaction ($\log_2\text{FC}=0.58$), suggesting that the decision to shunt lipids toward TAG storage versus membrane reconstruction is age-dependent and increasingly favors storage in senescing leaves.
-
-The systems biology perspective of He et al. (2021) provides important context for interpreting these lipid changes.
-They identified lipid metabolism as one of the few metabolic processes exhibiting strong, coordinated regulation at both transcriptional and translational levels, suggesting that membrane remodeling is a priority response that requires tight coupling between gene expression and protein production.
-Their identification of UDP-sulfoquinovose synthase (involved in sulfolipid biosynthesis) as part of the core conserved response across maize genotypes, with upregulation at both mRNA and protein levels, validates that the galactolipid and sulfolipid pathways we observe are not artifacts of our specific experimental conditions but rather represent fundamental adaptive mechanisms.
-The age-dependency we document represents an additional layer of regulation superimposed on this conserved core response.
-
-The integration of our transcriptomic and lipidomic datasets reveals coordinated regulation of lipid remodeling at multiple enzymatic steps, directly validating Wang et al.'s (2020) proposed metabolic pathway.
-Their schematic diagram (their Figure 8) depicts how degradation of phospholipids from the eukaryotic pathway provides phosphatidic acid (PA) and diacylglycerol (DAG) for MGDG synthesis, which then serves as substrate for DGDG production.
-Our data support this model at the molecular level: the upregulation of \textit{mgd2} combined with suppression of \textit{peamt2} creates a metabolic bottleneck that redirects lipid flux away from PC biosynthesis and toward galactolipid production.
-
-Wang et al. emphasized that maize, as an 18:3 plant, relies primarily on the eukaryotic (ER-localized) pathway for galactolipid synthesis, distinguishing it from 16:3 plants like \textit{Arabidopsis} that utilize both prokaryotic and eukaryotic pathways.
-This pathway dependence is evident in the specific phospholipid species we observe being depleted—predominantly those containing 18-carbon fatty acids characteristic of ER-derived lipids.
-The diacylglycerol released from phospholipid breakdown is transported to the chloroplast outer envelope where MGD2 catalyzes MGDG formation, and the resulting MGDG is then converted to DGDG by DGD enzymes.
-Our observation that \textit{mgd2} is the dominant upregulated galactolipid biosynthesis gene, while DGD genes show weaker responses, suggests that MGDG synthesis is the rate-limiting step in this cascade, with subsequent DGDG formation occurring through constitutive or post-transcriptionally regulated DGD activity.
-
-The age-dependent amplification of these responses represents a novel dimension absent from Wang et al.'s analysis.
-While they demonstrated that both leaf and root tissues undergo membrane remodeling, with leaves showing more dramatic shifts in galactolipid percentages than roots, they did not examine within-leaf heterogeneity across developmental stages.
-Our finding that PC34:2 shows both a main effect of phosphorus deficiency and a significant leaf stage interaction ($\log_2\text{FC}=-0.56$ for the interaction term) reveals that the magnitude of phospholipid depletion scales with leaf age.
-This developmental gradient suggests that the eukaryotic pathway for galactolipid synthesis is not uniformly active across the leaf canopy but rather is progressively enhanced in older leaves, where senescence-associated lipid turnover intersects with phosphorus limitation stress to create a compounded membrane remodeling response.
-
-Wang et al. reported that DGDG functions as the major bilayer lipid maintaining chloroplast membrane integrity under phosphorus stress, citing previous work showing that DGDG can substitute for phospholipids in forming stable bilayers.
-Our lipidomic data support this functional replacement: the increases in digalactosyldiacylglycerol (DGDG) we detect, combined with dramatic decreases in phosphatidylcholine and phosphatidylethanolamine, indicate a wholesale remodeling of membrane composition where galactolipids increasingly dominate the lipid bilayer, particularly in older leaves.
-The preservation of some phosphatidylglycerol (PG) species, despite overall phospholipid depletion, aligns with the known essential structural role of PG in photosystem II, where it cannot be substituted by galactolipids.
-
-\subsection*{Developmental Context Determines Nutrient Stress Outcomes}
-
-The leaf age dependency we observed suggests a fundamental principle of plant stress physiology: nutrient limitation does not impose a single metabolic state but rather interacts with pre-existing developmental programs to produce tissue-specific outcomes.
-Younger leaves, which are actively expanding and establishing photosynthetic capacity, appear to maintain core anabolic functions even under phosphorus deficiency, albeit at reduced efficiency.
-This is evident in the relatively modest changes in chlorophyll synthesis and photosystem component expression in leaf stage one and two under low phosphorus conditions (Fig.~\ref{fig:leaf_physiology_interaction}~E).
-These tissues may be protected by preferential allocation of available phosphorus or by the deployment of phosphorus-sparing metabolic alternatives that allow continued growth.
-
-Older leaves, by contrast, undergo a qualitatively different response.
-Natural senescence involves programmed dismantling of photosynthetic machinery, remobilization of nutrients to developing sinks, and eventual cell death.
-Phosphorus deficiency appears to accelerate this program rather than simply reducing its activity level.
-The expression profiles we observed in older leaves under phosphorus limitation resemble advanced senescence rather than young leaves experiencing moderate stress.
-
-This pattern is consistent with previous observations: He et al.(2021) demonstrated in their proteomic and transcriptomic analysis of maize under phosphorus limitation that the cellular response involves coordinated downregulation of ribosome biogenesis and protein synthesis machinery, representing a phosphorus-saving strategy that reduces demand for phosphate-rich rRNA.
-Our data extend these findings by showing that this conservation response is amplified in older leaves, which have lower growth demands and can more readily shift to catabolic metabolism.
-
-Notably, KEGG pathway analysis revealed differential regulation within photosynthesis itself.
-Genes involved in the Calvin cycle were primarily downregulated as a main effect of phosphorus treatment, whereas light harvesting complex genes showed enrichment specifically in the leaf $\times$ phosphorus interaction set.
-This distinction suggests that phosphorus deficiency imposes a hierarchical shutdown: carbon fixation capacity is uniformly reduced across all leaf ages through downregulation of RuBisCO and RuBisCO activase (\textit{rca3}, $\log_2\text{FC}=-3.40$), consistent with the documented reduction in ATP availability under phosphorus limitation.
-However, the thylakoid light-capture machinery experiences an additional, age-dependent decline in older leaves, possibly reflecting a programmed strategy to minimize photodamage from excess excitation energy in tissues that can no longer efficiently utilize absorbed light.
-
-Zhang et al. (2014) reported similar selective effects on light-harvesting proteins versus Calvin cycle enzymes in phosphorus-deficient maize leaves, though their bulk-tissue approach could not resolve the developmental gradient we now document.
-This differential regulation pattern aligns with He et al.'s (2021) systems-level observations that different aspects of photosynthesis respond through distinct regulatory mechanisms.
-They found that photophosphorylation and Calvin cycle proteins cluster into separate co-expression modules, with the former showing stronger responses to phosphorus limitation in shoots than roots.
-Our finding that Calvin cycle downregulation is a main effect while light-harvesting downregulation is age-dependent suggests that these modules are not only spatially separated but also temporally decoupled during the progression of leaf senescence under nutrient stress.
-The WGCNA framework they employed, which groups proteins based on coordinated abundance changes rather than assumed functional relationships, provides validation that our pathway-level enrichment patterns reflect genuine biological coordination rather than analytical artifacts.
-
-This interpretation is supported by the global expression indices we calculated for chlorophyll metabolism and senescence markers.
-Under phosphorus-sufficient conditions, these indices changed linearly with leaf stage ($R^2 = 0.468$ for chlorophyll synthesis; $R^2 = 0.572$ for photosynthesis; $R^2 = 0.277$ for senescence; all $p < 0.001$, Fig.~\ref{fig:leaf_physiology_interaction}~A), reflecting the orderly progression through the leaf lifespan.
-Phosphorus deficiency disrupted this linearity specifically in older leaves, creating a steeper trajectory that compressed what would normally be a gradual decline into a more rapid collapse.
-The significant interaction terms for these indices across all four gene sets we examined (chlorophyll degradation, $p < 0.01$; chlorophyll synthesis, $p < 0.05$; photosynthesis, $p < 0.001$; senescence, $p < 0.01$) indicate that this is not a localized effect on a few pathways but rather a systemic reprogramming of cellular priorities.
-
-The bifurcation of response trajectories parallels mechanistic insights from senescence biology.
-Chloroplast dismantling during senescence is not chaotic decay but rather an organized process involving specific proteases and regulated autophagy.
-The downregulation of light-harvesting proteins without proportional effects on stromal enzymes reflects the sequential nature of chloroplast breakdown, where thylakoid membranes are dismantled before stromal proteins are fully degraded.
-The accumulation of triacylglycerols in older leaves under phosphorus deficiency may represent a transient storage form for fatty acids released from membrane lipid catabolism, awaiting export to developing sinks or conversion to other metabolites.
-This aligns with the general principle that senescing tissues serve as nutrient sources, with older leaves effectively sacrificed to support younger tissues and reproductive development under resource limitation.
-
-\subsection*{Implications for Whole-Plant Resource Management}
-
-The developmental stratification of phosphorus responses has consequences for understanding how maize manages nutrient stress at the whole-plant level.
-The strong correlation between leaf age and response magnitude suggests that the plant employs a form of triage during phosphorus limitation, allowing older leaves to senesce more rapidly in order to sustain critical functions in younger, actively growing tissues and reproductive structures.
-This is consistent with the ionomic data showing increased seed-to-stover phosphorus ratios under deficiency ($1.99 \pm 0.13$, $p = 1.25 \times 10^{-19}$), indicating prioritized allocation to reproductive sinks at the expense of vegetative tissue maintenance.
-
-The membrane lipid remodeling we observe represents a multilayered adaptation strategy.
-First, the replacement of phospholipids with galactolipids conserves phosphorus for use in nucleic acids and ATP synthesis, critical for maintaining basic cellular functions.
-Second, the accumulation of triacylglycerols provides temporary storage for fatty acids released from membrane degradation, preventing their toxic accumulation while awaiting export or conversion.
-Third, the maintenance of plastidial phosphatidylglycerol (PG), despite severe depletion of other phospholipids, likely reflects its essential structural role in photosystem II, where it cannot be readily substituted.
-This hierarchy of lipid class priorities mirrors findings across diverse plant species and validates the evolutionarily conserved nature of this response.
-
-Critically, our age-resolved lipidomic analysis reveals nuances that were obscured in Wang et al.'s (2020) bulk-tissue measurements.
-While they reported overall increases in MGDG and DGDG molar percentages (from ~28\% to ~35\% for total galactolipids in leaves), our data demonstrate that this accumulation is not uniform across the leaf canopy but rather concentrated in older leaves, where the membrane remodeling response is most pronounced.
-Similarly, while Wang et al. reported overall decreases in PC, PE, PA, and PI percentages (with PC declining from ~15\% to ~10\% of total lipids), we reveal that the magnitude of phospholipid depletion increases systematically with leaf age.
-
-The dramatic reduction in lysophospholipids we observe (LPE18:2, $\log_2\text{FC}=-2.69$; LPC16:1, $\log_2\text{FC}=-3.50$; LPC18:3, $\log_2\text{FC}=-2.64$) extends Wang et al.'s findings by demonstrating that not only intact phospholipids but also their degradation intermediates are depleted, suggesting highly efficient recycling of phosphorus-containing lipid components rather than simple accumulation of breakdown products.
-
-Wang et al. also reported accumulation of triacylglycerols under phosphorus starvation, though they did not provide detailed molecular species characterization.
-Our identification of specific TAG species showing dramatic accumulation (TG50:3, $\log_2\text{FC}=3.36$; TG52:6, $\log_2\text{FC}=2.63$; TG54:9, $\log_2\text{FC}=2.25$; TG56:6, $\log_2\text{FC}=12.71$) extends their observations by revealing which fatty acid combinations are preferentially stored.
-The particularly striking accumulation of TG56:6, with a fold-change exceeding 6000-fold, suggests that certain very-long-chain polyunsaturated TAG species may serve specialized roles in temporary lipid storage during membrane remodeling.
-These TAGs likely represent transient storage forms for fatty acids released from phospholipid degradation, preventing lipotoxicity while awaiting transport to younger tissues or conversion to energy via $\beta$-oxidation, as Wang et al.(2020) hypothesized in their metabolic model.
-
-The coordinated transcriptional regulation we observe at specific enzymatic steps directly validates Wang et al.'s proposed biochemical pathway.
-They postulated that phospholipid degradation provides DAG for MGDG synthesis through a pathway involving phospholipase activity followed by PAP (phosphatidic acid phosphatase) action.
-Our detection of \textit{pah1} (Zm00001eb289800) showing leaf $\times$ phosphorus interaction supports this model, as this enzyme catalyzes the dephosphorylation of PA to DAG, the committed substrate for either TAG synthesis or transport to the chloroplast for galactolipid production.
-The positive interaction term for \textit{pah1} indicates that this branchpoint is developmentally regulated, with older leaves increasingly channeling DAG toward both pathways under phosphorus stress.
-
-Phospholipase D genes, which generate the PA substrate for PAP enzymes, show developmental interactions consistent with Wang et al.'s model: \textit{pld16} (Zm00001eb339870, phospholipase D16) exhibits a positive leaf $\times$ phosphorus interaction ($\log_2\text{FC}=0.56$), indicating enhanced activity specifically in older leaves under phosphorus deficiency.
-This pattern suggests that the initial step of phospholipid hydrolysis is developmentally amplified, with older leaves mounting progressively stronger phospholipid degradation responses that feed into both the galactolipid biosynthetic pathway and the TAG storage pathway.
-
-Wang et al. noted that sulfolipid (SQDG) accumulation contributes to membrane stabilization alongside galactolipids, though SQDG showed smaller fold-changes than MGDG/DGDG in their study.
-While we detect strong upregulation of both \textit{sqd1} and \textit{sqd2}, these enzymes serve a dual function: they synthesize both SQDG (under phosphorus-replete conditions) and DGGA (under phosphorus-deficient conditions).
-The accumulation of DGGA36:4 in our dataset, coupled with the coordinate upregulation of SQD1 and SQD2, confirms that maize employs this additional phosphorus-sparing lipid strategy that extends beyond the simple phospholipid-to-galactolipid replacement Wang et al. primarily documented.
-
-Importantly, He et al.'s finding that only five genes show robust upregulation at both mRNA and protein levels across all genotypes (including UDP-sulfoquinovose synthase, purple acid phosphatase PAP11, and phenylalanine ammonia lyase) suggests a core conserved phosphorus starvation response that operates independently of genetic background.
-Our observation that the age-dependent amplification of phosphorus responses occurs consistently across \invfour and control genotypes indicates that developmental modulation of this core response is similarly conserved.
-The bifurcation we observe into light-harvesting shutdown versus senescence induction may represent an evolutionarily ancient strategy for managing resource limitation across the leaf canopy, with the specific genes involved being conserved but their deployment being contingent on both phosphorus availability and developmental state.
-
-He et al.'s identification of a mitogen-activated protein kinase as a genotype-specific regulator of sucrose metabolism under low phosphorus suggests that signaling pathways, rather than metabolic enzymes themselves, may be the locus where developmental and environmental signals are integrated.
-Future work examining whether similar kinase-mediated signaling pathways show leaf-age-dependent activity could reveal the molecular mechanisms underlying the developmental stratification we document.
-
-The timing of our leaf sampling at 63 days after planting, between the V10 and V12 developmental stages, captured this allocation strategy during a critical transition period when plants were approaching flowering while still expanding leaf area.
-The fact that we observed such strong leaf-age-by-phosphorus interactions at this stage suggests that the developmental stratification of stress responses may be particularly important during this window when both vegetative growth and reproductive commitment are occurring simultaneously.
-Older leaves, having already contributed to canopy establishment, become expendable and serve as internal nutrient sources, while younger leaves continue to assimilate carbon to support grain filling.
-
-This interpretation aligns with the phenotypic data showing delayed flowering and reduced biomass accumulation under phosphorus deficiency (Fig.~\ref{fig:phenotypes}).
-The three-day delay in both anthesis ($3.60 \pm 0.26$ days, $p = 2.3 \times 10^{-20}$) and silking ($3.42 \pm 0.23$ days, $p = 5.7 \times 10^{-22}$) likely reflects the time required for the plant to accumulate sufficient resources through enhanced remobilization from senescing leaves before committing to reproduction.
-The progressive decline in stover biomass from 40 to 121 days after planting, which was most severe at the earliest time points (Fig.~\ref{fig:phenotypes}~E), suggests that the initial response to phosphorus limitation involves reduced leaf expansion rates, followed by accelerated senescence of established leaves as the stress persists.
-
-\subsection*{Limited Modulation by \invfour Despite Leaf Age Effects}
-
-Despite the strong leaf-age dependency of phosphorus responses, we found minimal evidence that the \invfour chromosomal inversion modulates this developmental interaction.
-The three genes showing significant genotype-by-phosphorus interactions (\textit{aldh2}, \textit{gras80}, \textit{flz22}) are located near but outside the inversion boundaries and did not show additional interactions with leaf stage.
-Similarly, while we detected subtle effects of \invfour on specific monogalactosyldiacylglycerol species (MGDG34:2 and MGDG34:3) that varied with both phosphorus availability and leaf age, these effects were restricted to a small number of lipid classes and did not alter the overall pattern of age-dependent stress responses.
-
-The primary effects of \invfour on flowering time (anthesis: $-1.31 \pm 0.26$ days, $p = 4.6 \times 10^{-6}$; silking: $-0.93 \pm 0.23$ days, $p = 1.3 \times 10^{-4}$) and plant height ($6.41 \pm 1.05$ cm, $p = 7.7 \times 10^{-8}$) seem to operate independently of both phosphorus treatment and leaf developmental stage.
-This independence suggests that whatever adaptive contributions \invfour makes to highland fitness, they do not involve fine-tuning the coordination between leaf senescence and nutrient stress responses.
-The inversion may establish constitutive differences in developmental timing that influence when leaves are produced and when flowering is initiated, but it does not appear to modify how individual leaves respond to phosphorus limitation as they age.
-
-The one exception was cob diameter, which showed a significant interaction between \invfour genotype and phosphorus availability (Fig.~\ref{fig:phenotypes}~D).
-While control lines maintained consistent cob diameter regardless of phosphorus treatment ($0.19 \pm 0.70$ cm, $p= 0.79$), \invfour plants developed substantially thinner cobs under phosphorus deficiency ($-2.81 \pm 0.68$ cm, $p= 1.4 \times 10^{-4}$).
-This reproductive trait response may reflect altered resource allocation priorities during the critical period when ear structures are being established, possibly linked to the earlier flowering phenology of \invfour plants.
-If \invfour plants are initiating reproductive development earlier relative to their vegetative growth stage, they may be more vulnerable to resource limitation during ear formation.
-However, this effect did not extend to other reproductive traits such as seed weight or overall yield components, limiting its explanatory power for \invfour's adaptive role.
-
-\subsection*{Rethinking the Hypothesis: Developmental Timing Over Nutrient Acquisition}
-
-Our findings require a reconsideration of how \invfour contributes to highland adaptation in the context of phosphorus-limiting volcanic soils.
-The original hypothesis—that \invfour enhances phosphorus acquisition or utilization efficiency through favorable alleles of genes like \textit{ZmPho1;2a}—is not supported by our data.
-The absence of significant genotype-by-phosphorus interactions across thousands of genes involved in phosphate scavenging (\textit{pap19}, \textit{pilncr1}, \textit{ips1}), membrane lipid remodeling (\textit{mgd2}, \textit{gpx1}), and metabolic adjustment indicates that \invfour does not fundamentally alter the phosphorus starvation response machinery.
-
-An alternative interpretation is that \invfour's adaptive value in highland environments comes primarily from coordinating developmental timing with the constrained growing season, rather than from direct enhancement of nutrient stress tolerance.
-The earlier flowering we observed in \invfour plants, which occurred regardless of phosphorus availability, aligns with previous reports showing that \invfour-highland accelerates flowering specifically at high elevations.
+
+From our multi-omics analysis, we can infer that the maize phosphorus starvation response is shaped by leaf developmental stage, with older leaves showing enhanced stress responses indicative of the onset of developmental senescence during the vegetative phase.
+While phosphorus deficiency triggered canonical molecular responses across genotypes, the magnitude of these responses depended on leaf developmental position.
+The \invfour chromosomal inversion showed minimal modulation of phosphorus starvation responses, indicating that its contribution to highland adaptation operates through constitutive effects on developmental timing rather than enhanced nutrient stress tolerance.
+
+\subsection*{We Captured A Gradient of Sequential Leaf Senescence in our Samples}
+
+By sampling leaves from the topmost fully developed collar and those below, we captured an actual physiological gradient in gene expression. 
+The gradient appears to accurately reflect the onset and initial phases of sequential senescence in our plants, which we estimated were in the V10–V12 stage, approximately 10 to 16 days prior to flowering. 
+We observed this sequential senescence as the progressive aging of the leaves down the plant axis, ending with the death of the leaves nearest to the soil.
+
+Using gene set transcriptomic indices, we corroborated that chlorophyll biosynthesis and degradation were correlated with this vertical developmental axis Fig~\ref{fig:leaf_physiology_interaction} A. 
+And in particular, Magnesium chelatase \textit{chlh1} (\textit{Zm00001eb433610}), glutamyl-tRNA reductase \textit{gtr3} (\textit{Zm00001eb044210}), and uroporphyrinogen decarboxylase \textit{urod} (\textit{Zm00001eb358510}) consistently decreased expression with each successive sample downwards, while the pheophytinase \textit{pph} (\textit{Zm00001eb231810}) showed the opposite pattern. 
+While the photosynthesis genes \textit{pep1} and \textit{ssu1} (pep carboxylase and rubisco small subunit, respectively)  were downregulated, the senescence-associated genes \textit{salt1} and \textit{mir3}  were upregulated.
+All these genes surpassed our statistical and effect size cutoffs for high-confidence DEGs \ref{table::}.
+
+
+This developmental framework provides context for interpreting phosphorus starvation responses.
+The leaf-stage variable represents a combined axis of photosynthetic capacity and the progression of developmental senescence, allowing us to quantify how nutrient stress interacts with natural developmental transitions during vegetative growth.
+The significant interaction terms we observed for chlorophyll metabolism, photosynthesis, and senescence gene sets indicate that phosphorus deficiency does not uniformly shift all leaves along this gradient but rather amplifies the divergence between young and old tissues.
+
+\subsection*{Phosphorus Starvation Responses Increase in Magnitude with Leaf Position}
+
+Phosphorus deficiency activated the expected molecular machinery for nutrient scavenging and remobilization.
+Upregulated genes included non-coding RNAs \textit{pilncr1} and \textit{ips1}, phosphate scavenging enzymes \textit{gpx1}, \textit{pap2}, and \textit{pap19}, phosphate transporters \textit{phos1}, \textit{pht1}, and \textit{pht7}, and galactolipid biosynthesis genes \textit{mgd2}, \textit{sqd2}, \textit{sqd3}, and \textit{glpx2}.
+Gene Ontology enrichment confirmed activation of galactolipid biosynthetic processes and phosphate starvation response pathways, while KEGG analysis highlighted glycerophospholipid metabolism.
+Downregulated genes included \textit{peamt2}, which catalyzes phosphoethanolamine methylation in the Kennedy pathway for PC biosynthesis, photosynthesis genes \textit{rca3} and \textit{lhcb10}, and transcription factors \textit{zim25}, \textit{nactf132}, and \textit{bzip81}.
+These patterns validate the canonical phosphorus starvation response documented in previous studies \cite{Wang2020, He2021}.
+
+We detected 487 high-confidence DEGs with a significant and strong interaction between leaf stage and phosphorus treatment, meaning that their phosphorus responses increased or decreased systematically with leaf position.
+Our statistical modelling was designed to detect two functionally distinct trajectories.
+Genes with negative interaction terms, including light-harvesting proteins \textit{cab}, \textit{psad1}, and \textit{ndho1}, showed increased negative responses to phosphorus starvation in older leaves, corresponding to selective shutdown of the thylakoid light-capture machinery.
+Gene Ontology enrichment for this set highlighted photosynthesis and light-harvesting complex terms, while KEGG analysis specifically identified light-harvesting complex genes rather than Calvin cycle components.
+This distinction suggests distinct developmental regulation: Calvin cycle downregulation occurs uniformly across leaf ages as a direct consequence of ATP limitation, whereas light-harvesting shutdown is more pronounced with increasing leaf age.
+
+Genes with positive interaction terms showed amplified phosphorus-starvation responses in older leaves, corresponding to accelerated senescence and enhanced nutrient remobilization.
+These included pyruvate kinase \textit{pk}, phospholipases \textit{plc6} and \textit{pld16}, and phosphatidate phosphatase \textit{pah1}.
+Gene Ontology enrichment for this positive interaction set included amino acid transport, aging, and detoxification processes.
+The chlorophyll degradation enzyme \textit{pph} also showed positive correlation with leaf age, while \textit{sgrl1} was downregulated, potentially shifting chlorophyll catabolism towards the PPH pathway from the chlorophyllase pathway, which has been reported to mediate  87\% chlorophyll degradation in maize \cite{Wei2025}.
+
+This bifurcation into light-harvesting shutdown versus senescence acceleration shows that phosphorus deficiency imposes distinct regulatory programs depending on developmental context.
+The expression profiles we observed in older leaves under phosphorus limitation suggest accelerated progression of developmental senescence rather than young leaves experiencing moderate stress, indicating that nutrient limitation accelerates the natural senescence program during the vegetative phase.
+
+\subsection*{PC34:2 Depletion Increases with Leaf Age and Correlates with Flowering Delay}
+
+Lipidomic analysis confirmed the classical membrane remodeling response to phosphorus starvation.
+Phospholipid classes showed widespread depletion: phosphatidylcholines PC34:2, PC32:2, PC32:0, and PC38:6; phosphatidylethanolamines PE34:4, PE34:3, and PE32:1; lysophosphatidylethanolamines LPE18:2, LPE18:3, and LPE16:0; lysophosphatidylcholines LPC16:1, LPC18:3, and LPC18:2; and phosphatidylglycerols PG32:0 and PG34:3.
+Triacylglycerols accumulated under phosphorus stress, with TAG species TG50:3, TG52:6, TG54:9, TG56:6, TG50:2, and TG52:3 showing increased abundance.
+TG56:6 exhibited accumulation exceeding 12-fold increase.
+Galactolipid accumulation was evidenced by DGGA36:4, a phosphorus-free membrane component.
+LION enrichment analysis confirmed these systemic changes: triacylglycerols showed strong enrichment, while glycerophospholipids and membrane components were significantly depleted.
+
+These patterns align with the established membrane remodeling strategy documented previously: replacement of phosphorus-containing phospholipids with galactolipids conserves phosphorus for nucleic acid and ATP synthesis, while TAG accumulation provides temporary storage for fatty acids released from membrane degradation \cite{wang2020}.
+The partial preservation of phosphatidylglycerol species, for which we don't detect statistical differences, despite severe depletion of other phospholipids, likely reflects PG's essential structural role in photosystem II, where it cannot be readily substituted \cite{hagio2000}.
+
+Phosphatidylcholine PC34:2 showed both a strong main effect of phosphorus deficiency and a significant Leaf $\times$ -P interaction, indicating that the magnitude of PC34:2 depletion increased systematically with leaf developmental position.
+This age-dependent response is noteworthy given PC34:2's binding to ZCN8, the maize florigen ortholog \cite{barnes2022}.
+We previously demonstrated that PC34:2 copurifies with recombinant ZCN8 protein and identified probable binding sites through molecular docking simulations.
+Additionally, phospholipase HPC1 expression, which influences PC34:2 levels, correlates with flowering-time variation across the maize diversity panel.
+
+The coordinate patterns we observed (PC34:2 depletion, flowering delay under phosphorus stress, and \textit{peamt2} suppression) raise the possibility that phosphorus stress influences reproductive timing through multiple mechanisms.
+The dramatic suppression of \textit{peamt2}, which catalyzes sequential methylation of phosphoethanolamine to phosphocholine in the Kennedy pathway, represents one of the strongest transcriptional responses in our dataset.
+In Arabidopsis, the ortholog XIPOTL1 affects flowering time, root architecture, and stress responses \cite{CruzRamirez2004}.
+In maize, natural variation at the \textit{peamt2} locus associates with flowering time in Mexican highland populations \cite{PerezLimon2022, barnes2022}, suggesting that modulation of phospholipid biosynthesis contributes to adaptive variation in developmental timing.
+If ZCN8 florigen activity or stability requires PC34:2 binding, as demonstrated for Arabidopsis FT interactions with membrane lipids in temperature-dependent contexts, then systematic depletion of this specific phospholipid species could potentially impair florigen signaling beyond resource limitation alone.
+
+The downregulation of MADS-box transcription factors \textit{zmm4} and \textit{zmm15} with increasing leaf age further connects lipid remodeling to developmental transitions.
+These flowering-time regulators showed strong negative correlations with leaf stage, consistent with the natural progression from vegetative to reproductive phase transitions during our sampling window at V10-V12 stage.
+
+\subsection*{LPE might be a Senescence Marker in Maize, but is a Senecence Suppressor in Tomato and Arabidopsis}
+
+ It has been demonstrated in 16:3 plants such as \textit{Arabidopsis} and tomato, that LPE acts as a leaf senescence suppressor \cite{amari}. 
+ In these plants, exogenous LPE application delays senescence by inhibiting phospholipase D and preserving membrane integrity \cite{Farag1991, Kang2003}.
+ 
+The behavior of lysophosphatidylethanolamines in our dataset contradicts this established pattern, highlighting a possible new difference in phospholipid metabolism between 16:3 and 18:3 plants.
+Although multiple LPE species (LPE18:2, LPE18:3, and LPE16:0) were depleted under phosphorus deficiency, LPE18:3 showed a strong positive association with increased leaf developmental stage. 
+This accumulation indicates that LPE acts as a marker for initial senescence, the inverse of its reported senescence-suppressor role in 16:3 plants.
+
+The lipidomic pattern is paralleled by coordinated transcriptional regulation.
+Phospholipases \textit{plc6} and \textit{pld16} both showed positive Leaf $\times$ -P interactions, indicating enhanced phospholipid hydrolysis in older leaves under phosphorus stress.
+In contrast, lysophosphatidylethanolamine acyltransferase \textit{lpeat2} and choline/ethanolamine kinase \textit{cek4} showed no differential expression, suggesting constitutive regulation.
+
+This divergence might reflect the difference between 16:3 and 18:3 plants in lipid metabolism architecture.
+Maize, as an 18:3 plant, relies exclusively on the eukaryotic pathway for galactolipid synthesis \cite{Wang2020}, whereas 16:3 plants utilize both prokaryotic (plastid-localized) and eukaryotic (ER-localized) pathways.
+In maize's eukaryotic pathway, diacylglycerol derived from phospholipid degradation is transported to the chloroplast outer envelope for galactolipid synthesis, creating direct metabolic flux from PE to LPE to DAG to MGDG.
+The efficiency of this pathway, particularly when PC biosynthesis is blocked by \textit{peamt2} suppression, may preclude LPE accumulation as the lipid is rapidly consumed in downstream reactions.
+This positions LPE as a transient salvage intermediate rather than a regulatory signal in 18:3 plants.
+
+Our data measuring endogenous levels in an 18:3 plant suggest maize prioritizes efficient phosphorus recycling over membrane preservation, a strategy consistent with exclusive reliance on the eukaryotic galactolipid synthesis pathway.
+
+\subsection*{Enhanced PAH1 Activity, but Not PDAT Expression, Underlies Leaf Stage-Dependent Accumulation of Polyunsaturated TAGs }
+
+The composition of accumulated triacylglycerols provides insight into lipid salvage mechanisms during membrane remodeling.
+Highly unsaturated TAG species were enriched, including TG54:9 and TG52:6, both containing 18:3 fatty acids.
+This pattern correlates with the depletion of polyunsaturated phospholipids PC36:6 and LPC18:3, both of which showed leaf-stage effects.
+
+The preservation of polyunsaturated fatty acids in TAG form is consistent with direct transfer via the PDAT pathway, which transfers intact acyl chains from phospholipids to diacylglycerol.
+This mechanism would avoid the energetic cost of complete phospholipid degradation followed by de novo TAG synthesis requiring re-desaturation of fatty acids.
+The fact that this metabolic strategy operates without significant transcriptional upregulation of PDAT genes indicates that the phospholipid-to-TAG flux is governed by substrate availability (increasing phospholipid degradation) rather than by increased PDAT gene expression.
+
+Phosphatidate phosphatase \textit{pah1} showed a positive Leaf $\times$ -P interaction, indicating enhanced activity in older leaves under phosphorus stress.
+This enzyme commits lipid flux toward TAG synthesis versus membrane lipid synthesis, and its age-dependent response is consistent with developmental control of lipid partitioning decisions.
+Wang et al.
+(2020) noted that TAG accumulation under phosphorus starvation likely represents transient storage for fatty acids released from membrane lipid catabolism, awaiting transport to younger tissues or conversion to energy via beta-oxidation.
+The age-dependent amplification of TAG accumulation in our dataset is compatible with this interpretation and suggests that substrate-driven lipid salvage operates in senescing tissues during the vegetative phase.
+
+\subsection*{Senescence Gene Expression Compounds with Phosphorus Limitation in Older Leaves}
+
+Multiple independent evidence streams validate the developmental senescence component of the leaf-position gradient and its interaction with phosphorus stress.
+The GO-senescence gene set showed both a strong Leaf main effect and a significant Leaf $\times$ -P interaction.
+We identified 94 combined senescence DEGs by integrating LSD database genes, SAG orthologs from literature, and Arabidopsis homologs.
+Among these, 33 high-confidence SAG ortholog DEGs showed significant responses across predictors.
+The E3 ubiquitin ligase family was represented by 14 UPL genes involved in protein turnover during senescence.
+NAC and WRKY transcription factors, which are master regulators of senescence programs, included 5 DEGs characterized by Li et al.
+(2024) as maize senescence regulators.
+Chlorophyll degradation enzymes increased with leaf developmental position, while chlorophyll synthesis and carotenoid biosynthesis declined, patterns validated by Ciganda et al.
+(2008), who reported chlorophyll content decline in basal maize leaves.
+
+The coordinated response across omics platforms shows the integration of developmental senescence programs with phosphorus limitation.
+Senescence-associated gene expression increases with age, phospholipids deplete, triacylglycerols accumulate, and photosynthesis declines (and all of these responses amplify under phosphorus stress in older leaves during the vegetative phase).
+This coordination supports the interpretation that phosphorus deficiency does not impose a separate stress response but rather accelerates the natural senescence program that normally leads to death of the lowest leaves.
+
+Ionomic data provide whole-plant context for these molecular patterns.
+The seed-to-stover phosphorus ratio increased under phosphorus deficiency, indicating prioritized allocation to reproductive sinks at the expense of vegetative tissue maintenance.
+This resource allocation strategy reflects a form of developmental triage: older leaves positioned lower in the canopy are sacrificed through accelerated senescence to support younger tissues and reproductive structures.
+The strong correlation between leaf developmental position and response magnitude suggests that plants employ this triage strategy systematically during phosphorus limitation, allowing senescence of older leaves to sustain functions in actively growing tissues.
+
+\subsection*{Inv4m Does Not Alter Phosphorus Starvation Responses Despite Effects on Flowering Time}
+
+Despite the strong developmental dependency of phosphorus responses, we found minimal evidence that the \invfour chromosomal inversion modulates these interactions.
+The three genes showing significant genotype-by-phosphorus interactions (\textit{aldh2}, \textit{gras80}, and \textit{flz22}) are located outside the inversion boundaries and did not show additional interactions with leaf stage.
+Lipidomic analysis detected subtle \invfour effects on specific monogalactosyldiacylglycerol species MGDG34:2 and MGDG34:3 that varied with both phosphorus availability and leaf age, but these effects were restricted to a small number of lipid classes and did not alter the overall pattern of age-dependent stress responses.
+
+The primary effects of \invfour on flowering time and plant height operated independently of both phosphorus treatment and leaf developmental stage.
+This independence indicates that \invfour's contribution to highland adaptation does not involve fine-tuning the coordination between leaf senescence and nutrient stress responses.
+Instead, the inversion appears to establish constitutive differences in developmental timing that influence when leaves are produced and when flowering is initiated, without modifying how individual leaves respond to phosphorus limitation as they age.
+
+The absence of significant \invfour modulation of canonical phosphorus starvation machinery (including phosphate scavenging genes, membrane lipid remodeling enzymes, and metabolic adjustment pathways) requires reconsideration of the hypothesis that \invfour enhances phosphorus acquisition or utilization efficiency.
+The fact that genes like \textit{ZmPho1;2a}, a phosphate transporter located within the inversion and previously proposed as an adaptive candidate, do not show genotype-by-phosphorus interactions suggests that \invfour's adaptive value in highland environments comes primarily from coordinating developmental timing with the constrained growing season rather than from direct enhancement of nutrient stress tolerance.
+The earlier flowering observed in \invfour plants, which occurred regardless of phosphorus availability, aligns with previous reports showing that \invfour-highland accelerates flowering specifically at high elevations \cite{Gates2019, Barnes2022}.
 In highland environments with limited temperature sum accumulation and early season termination, completing the life cycle before the onset of unfavorable conditions may be more critical for fitness than marginal improvements in phosphorus acquisition efficiency.
 
-This developmental timing hypothesis is consistent with the leaf age interaction effects we observed.
-If \invfour establishes an accelerated developmental program, the coordination between leaf aging and nutrient stress responses becomes particularly important for ensuring adequate resource availability during the compressed reproductive window.
-However, our data suggest that this coordination is achieved through constitutive changes in developmental rate rather than through genotype-specific modulation of how individual leaves respond to phosphorus limitation as they age.
-The machinery for integrating leaf senescence with phosphorus stress is conserved across genotypes; what differs is the temporal schedule on which that machinery operates.
-
-\subsection*{Methodological Advances and Limitations}
-
-Our experimental design, which systematically sampled four leaf positions per plant and employed both transcriptomic and lipidomic profiling, was specifically structured to detect developmental interactions with environmental treatments.
-This approach proved essential for revealing the leaf age dependency of phosphorus responses, which would have been obscured by bulk tissue sampling or single-leaf-stage analyses.
-The statistical framework we employed, treating leaf stage as a continuous numerical variable rather than discrete categories, allowed us to quantify interaction effects as rates of change with increasing leaf age, providing more power to detect systematic trends than traditional categorical comparisons.
-
-However, our use of Near Isogenic Lines in the B73 genetic background, while ideal for isolating \invfour effects from confounding variation, may have limited our ability to detect genotype-specific developmental interactions.
-The B73 background represents temperate germplasm adapted to high-input agriculture with regular fertilization, and it may lack complementary genetic variants that interact with \invfour to modulate nutrient stress responses in natural highland populations.
-The fact that we conducted the field experiment at Rocksprings, Pennsylvania, rather than in the Mexican highlands also means that we captured phosphorus stress effects in isolation from the cold temperatures, altered day length, and UV exposure that characterize the native environment where \invfour has been selected.
-
-The timing of our leaf sampling at a single developmental stage, while providing detailed within-plant spatial resolution, did not capture potential temporal changes in how leaf age interacts with phosphorus availability.
-It is possible that the developmental interactions we observed at the V10-V12 stage differ from those that would be evident at earlier seedling stages or later during grain filling.
-Future experiments employing time-course sampling across multiple plant developmental stages, combined with spatial sampling across leaf positions, would provide a more complete picture of how phosphorus stress responses are integrated with both leaf aging and whole-plant ontogeny.
-
-\subsection*{Broader Implications for Understanding Chromosomal Inversions in Adaptation}
-
-Our findings contribute to a growing recognition that chromosomal inversions may contribute to local adaptation through multiple mechanisms that operate at different organizational levels.
-The classical model of inversions maintaining co-adapted gene complexes through suppressed recombination predicts that inversions should show strong genotype-by-environment interactions when exposed to the selecting environment.
-Our failure to detect such interactions for phosphorus stress, despite strong main effects of both \invfour and phosphorus treatment, suggests that at least for this environmental factor, \invfour does not function primarily through environmentally contingent gene expression changes.
-
-Instead, \invfour appears to establish constitutive phenotypic differences in developmental timing that may provide fitness advantages in highland environments through indirect mechanisms.
-This interpretation is consistent with theoretical work suggesting that inversions can facilitate local adaptation by coordinating the expression timing of multiple genes rather than by maintaining specific allelic combinations that respond differently to environmental cues.
-The flowering time and height effects we observed, which operated independently of phosphorus availability, support this developmental coordination model.
-
-The small set of genotype-by-phosphorus interaction outliers we detected, particularly those overlapping with previously identified flowering time loci, may represent secondary modulatory effects that fine-tune the magnitude of conserved responses rather than primary adaptive mechanisms.
-These subtle effects could accumulate over many genes to produce meaningful fitness differences without requiring large-effect, environment-specific transcriptional reprogramming at individual loci.
-The challenge for future work will be to determine whether these small-effect interactions, when summed across the many genes within and linked to \invfour, produce ecologically relevant phenotypic differences under naturalistic conditions.
+The one phenotypic exception was cob diameter, which showed a significant \invfour $\times$ phosphorus interaction.
+While control lines maintained consistent cob diameter regardless of phosphorus treatment, \invfour plants developed substantially thinner cobs under phosphorus deficiency.
+This reproductive trait response may reflect altered resource allocation priorities during ear development, possibly linked to the earlier flowering phenology of \invfour plants.
+If \invfour plants initiate reproductive development earlier relative to their vegetative growth stage, they may be more vulnerable to resource limitation during ear formation.
+However, this effect did not extend to other reproductive traits such as seed weight or overall yield, limiting its explanatory power for \invfour's adaptive role.
 
 \subsection*{Conclusion}
 
-Our comprehensive analysis demonstrates that the maize phosphorus starvation response is fundamentally shaped by leaf developmental stage, with older leaves experiencing compounded stress that integrates nutrient limitation with natural senescence programs.
-We detected quantitatively two distinct molecular developmental trajectories: a negative interaction pattern corresponding to selective shutdown of light-harvesting photosynthetic machinery, and a positive interaction pattern corresponding to induced senescence and enhanced nutrient remobilization.
-Gene ontology and pathway enrichment analyses confirm that these trajectories reflect coordinated regulation of functionally related gene sets rather than stochastic variation in stress sensitivity.
-
-The lipidomic dimension of this response parallels the transcriptomic patterns, with older leaves showing enhanced phospholipid degradation, galactolipid accumulation, and glucuronide lipid (DGGA) synthesis under phosphorus limitation.
-These findings align with established principles of membrane remodeling during phosphorus stress but reveal that the magnitude of remodeling depends critically on developmental context.
-Comparison with previous studies demonstrates that our age-resolved approach captures heterogeneity in stress responses that would be averaged out in bulk-tissue analyses.
-
-Despite this strong leaf-age dependency, the \invfour chromosomal inversion does not substantially modulate these developmental interactions, indicating that its contribution to highland adaptation operates primarily through constitutive effects on developmental timing rather than through enhanced nutrient stress tolerance.
-The machinery for coordinating leaf senescence with phosphorus stress is evolutionarily conserved and operates independently of \invfour genotype; what \invfour appears to control is the temporal schedule on which leaves are produced and senesced, which may be advantageous in highland environments with shortened growing seasons.
-
-These findings highlight the need to consider developmental context when interpreting physiological responses to environmental stress and suggest that the adaptive value of chromosomal inversions may lie more in coordinating developmental schedules with environmental constraints than in maintaining environment-specific gene expression programs.
-The bifurcation of phosphorus stress responses into light-harvesting shutdown versus senescence induction represents a fundamental principle of how plants integrate nutrient limitation with developmental programs, with implications for understanding crop responses to nutrient deficiency and for designing breeding strategies that optimize resource use efficiency across leaf canopies.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Our multi-omics analysis demonstrates that the maize phosphorus starvation response is shaped by leaf developmental stage during the vegetative phase, with older leaves positioned below the collar experiencing enhanced stress responses characteristic of the onset of developmental senescence that integrate nutrient limitation with natural developmental progression.
+The bifurcation of molecular responses into light-harvesting shutdown and senescence acceleration shows coordinated regulation of functionally distinct pathways.
+Lipidomic patterns parallel transcriptomic responses, with age-dependent amplification of phospholipid degradation, galactolipid accumulation, and triacylglycerol synthesis.
+The divergence of lysophosphatidylethanolamine patterns from 16:0 plant models highlights the importance of lipid metabolism architecture differences between 16:0 and 18:3 plant species.
+Despite this strong developmental dependency, the \invfour chromosomal inversion does not substantially modulate phosphorus starvation responses, indicating that its contribution to highland adaptation operates through constitutive effects on developmental timing rather than enhanced nutrient stress tolerance.
 
 \section*{Materials and methods}
 
