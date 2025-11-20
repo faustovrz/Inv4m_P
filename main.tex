@@ -41,7 +41,7 @@
 % \verb|¯\_(ツ)_/¯|
 % \end{CJK}
 
-\title{Multi-Omics of Maize Chromosomal Inversion $\textit{Inv4m}$ in Phosphorus Deficiency Show Typical Starvation Responses and Leaf-Age Dependency, Rather Than Adaptive Contributions from the Chromosomal Inversion.}
+\title{Multi-Omics of Maize Chromosomal Inversion $\textit{Inv4m}$ in Phosphorus Deficiency Show Typical Starvation Responses and Leaf-Age Dependency, Rather Than Adaptive Contributions From the Inverted Karyotype.}
 %\title{Does maize \textit{Inv4m} contribute to adaptation to soils with low phosphorus? Not really}
 
 \author[$1$,$2$,*]{Fausto Rodríguez-Zapata}
@@ -51,7 +51,8 @@
 \author[$4$]{Sergio Pérez-Limón}
 \author[$4$]{Melanie Perryman}
 \author[$5$]{Miguel A. Piñeros}
-\author[$6$]{Daniel Runcie}
+\author[$6$]{Jonathan Odilón Ojeda-Rivera}
+\author[$7$]{Daniel Runcie}
 \author[$4$]{Ruairidh Sawers}
 \author[$1$,*]{Rubén Rellán-Álvarez}
 
@@ -60,7 +61,8 @@
 \affil[$3$]{United States Department of Agriculture, Agricultural Research Service, Plant Science Research Unit, Raleigh, NC 27695}
 \affil[$4$]{Department of Plant Science, Pennsylvania State University, University Park, PA, USA}
 \affil[$5$]{Robert W. Holley Center for Agriculture and Health, USDA-ARS, Ithaca, NY, USA}
-\affil[$6$]{Department of Plant Sciences, University of California, Davis, CA, USA}
+\affil[$6$]{Institute for Genomic Diversity, Cornell University, Ithaca, NY 14853, USA}
+\affil[$7$]{Department of Plant Sciences, University of California, Davis, CA, USA}
 
 
 \keywords{Local Adaptation, highland maize, Teosinte Mexicana introgression}
@@ -101,38 +103,60 @@ E-mail: frodrig4@ncsu.edu, rrellan@ncsu.edu}
 \ifthenelse{\boolean{displaylineno}}{\linenumbers}{}
 
 \section{Introduction}
-%(todo: fausto) Anadir sobre patrones de senescencia y respuesta a fosforo en la introduccion. Enfatizar que estos datos son de campo.
 
-\lettrine[lines=2]{\color{color2}M}aize was originally domesticated in the tropical lowlands of Mexico. Before its expansion into temperate regions, maize was introduced to the Mexican highlands and the Southwestern United States, where sympatry with highland teosinte \textit{Zea mays ssp. mexicana} (shorthand \mex) likely facilitated the introgression of adaptive alleles from \mex. Teosinte \mex introgression probably facilitated adaptation to temperate zones and further expansion worldwide \cite{yang2023, guo2018-on, barnes2022}. 
-However, while the average \mex introgression in modern maize is around 18\% \cite{yang2023}, not all highland-adaptive loci are present in temperate maize. Highland-associated chromosomal inversions, such as \invfour and \textit{Inv9f}, are prevalent in highland teosinte populations \cite{pyhajarvi2013} and traditional Mexican maize varieties (TVs) \cite{crow2020,gonzalez-segovia2019-jy} but are rare in modern temperate maize. 
+\lettrine[lines=2]{\color{color2}M}aize was originally domesticated in the tropical lowlands of Mexico.
+Before its expansion into temperate regions, maize was introduced to the Mexican highlands and the Southwestern United States, where sympatry with highland teosinte \textit{Zea mays ssp. mexicana} (shorthand \mex) likely facilitated the introgression of adaptive alleles from \mex.
+Teosinte \mex introgression probably facilitated adaptation to temperate zones and further expansion worldwide \cite{yang2023, guo2018-on, barnes2022}.
 
-Chromosomal inversions can contribute to local adaptation by preserving locally adapted alleles across multiple loci and reducing recombination within the inversion \cite{kirkpatrick2006b}. 
-Genotyping of teosinte populations using the Maize 50K chip revealed that \invfour spans 13 Mb and is predominantly found in \mex populations \cite{pyhajarvi2013}. 
-In Mexican TVs, variation in \invfour is associated with elevation and flowering time \cite{romero_navarro2017-cn}. 
-Additionally, \invfour shows reduced genetic diversity, a clinal relationship with elevation, and is nearly fixed in locations above 2500 m.a.s.l. \cite{crow2020}. 
-The inversion exhibits suppressed recombination, as confirmed in a biparental cross \cite{gonzalez-segovia2019-jy}.
-\invfour demonstrates classic patterns of gene-by-environment interactions indicative of local adaptation. 
-Plants carrying the \invfour-highland allele exhibit delayed flowering at low elevations and earlier flowering at high elevations \cite{gates2019-xu, barnes2022}. 
+However, while the average \mex introgression in modern maize is around 18\% \cite{yang2023}, not all highland-adaptive loci are present in temperate maize.
+Highland-associated chromosomal inversions, such as \invfour and \textit{Inv9f}, are prevalent in highland teosinte populations \cite{pyhajarvi2013} and traditional Mexican maize varieties (TVs) \cite{crow2020,gonzalez-segovia2019-jy} but are rare in modern temperate maize.
+
+Chromosomal inversions can contribute to local adaptation by preserving locally adapted alleles across multiple loci and reducing recombination within the inversion \cite{kirkpatrick2006b}.
+Genotyping of teosinte populations using the Maize 50K chip revealed that \invfour spans 13 Mb and is predominantly found in \mex populations \cite{pyhajarvi2013}.
+In Mexican TVs, variation in \invfour is associated with elevation and flowering time \cite{romero_navarro2017-cn}.
+Additionally, \invfour shows reduced genetic diversity, a clinal relationship with elevation, and is nearly fixed in locations above 2500 m.a.s.l. \cite{crow2020}.
+The inversion shows suppressed recombination, as confirmed in a biparental cross \cite{gonzalez-segovia2019-jy}.
+\invfour demonstrates classic patterns of gene-by-environment interactions indicative of local adaptation.
+Plants carrying the \invfour-highland allele show delayed flowering at low elevations and earlier flowering at high elevations \cite{gates2019-xu, barnes2022}.
 The highland haplotype of \invfour was introgressed from \textit{Zea mays ssp. mexicana} \cite{pyhajarvi2013,calfee2021-mr,hufford2013-gs}, a wild maize relative native to the Mexican highlands.
 
-Despite strong evidence linking \invfour to local adaptation, the physiological processes and environmental factors underlying its adaptive role remain unclear. 
-Furthermore, the specific genes within \invfour that drive local adaptation are largely unidentified. 
-Previous research has shown that \invfour-highland upregulates photosynthesis genes in response to cold at the seedling stage \cite{crow2020} and is associated with earlier flowering in the Mexican highlands, which likely enhances fitness in environments with limited growth-degree accumulation throughout the year \cite{romero_navarro2017-cn}. 
+Despite strong evidence linking \invfour to local adaptation, the physiological processes and environmental factors underlying its adaptive role remain unclear.
+Furthermore, the specific genes within \invfour that drive local adaptation are largely unidentified.
+Previous research has shown that \invfour-highland upregulates photosynthesis genes in response to cold at the seedling stage \cite{crow2020} and is associated with earlier flowering in the Mexican highlands, which likely enhances fitness in environments with limited growth-degree accumulation throughout the year \cite{romero_navarro2017-cn}.
 However, cold is not the only limiting factor for plant growth in the Mexican highlands.
-Volcanic soils (Andosols), which dominate the Mexican highlands, present an additional constraint. 
-Approximately 95\% of natural Andosol profiles in Mexico are found above 2000 m.a.s.l. \cite{paz-pellat2018,inegi2013}. 
-These soils are characterized by high phosphorus retention \cite{krasilnikov2013}, which leads to low phosphorus availability for plant uptake \cite{galvan-tejada2014}. 
+Volcanic soils (Andosols), which dominate the Mexican highlands, present an additional constraint.
+Approximately 95\% of natural Andosol profiles in Mexico are found above 2000 m.a.s.l. \cite{paz-pellat2018,inegi2013}.
+These soils are characterized by high phosphorus retention \cite{krasilnikov2013}, which leads to low phosphorus availability for plant uptake \cite{galvan-tejada2014}.
 MICH21, one of the Mexican highland maize accessions analyzed by \cite{crow2020}, originates from the Purépecha Plateau, where Andosols and phosphorus-efficient TVs are common \cite{paz-pellat2018,galvan-tejada2014,bayuelo-jimenez2011,bayuelo-jimenez2014}.
-\invfour may contribute to adaptation in the highlands by carrying alleles that enhance the phosphorus starvation response (PSR). 
+\invfour may contribute to adaptation in the highlands by carrying alleles that enhance the phosphorus starvation response (PSR).
+
+\textit{Arabidopsis} \cite{luquez2006} and rice \cite{Mondal1984} show sequential or acropetalous senescence \cite{Leopold1961}, where aging progresses linearly from the base to the apex.
+In maize, however, the vertical profile of physiological activity follows a bell-shaped curve whose peak depends on the developmental stage \cite{Ciganda2008}.
+After flowering,  chlorophyll content \cite{Ciganda2008}, leaf area and longevity \cite{ValentinuzTollenaar2004}, nitrogen \cite{Wei2025} and water content \cite{GAo2023} first increase and then decline with leaf position, peaking near the ear leaf.
+In contrast, during the vegetative phase, peak chlorophyll content and metabolic activity reside at the uppermost fully expanded 'collar' leaf \cite{Ciganda2008}.
+While the steepness of this gradient is genotype-dependent \cite{Gao2023}, this architecture generally drives an 'outside-in' senescence pattern where aging proceeds from both the top and bottom of the canopy toward the middle \cite{Wei2025}.
+This physiological architecture ensures that leaves closest to the ear, the primary sink, retain longevity and photosynthetic activity the longest \cite{ValentinuzTollenaar2004}.
+This delay in senescence near the ear aligns with the principle of proximity allocation, minimizing transport distances for assimilates and optimizing energy use during the critical grain-filling period \cite{Wei2025, ValentinuzTollenaar2004}.
+In the vegetative stage, the collar leaf is a source of photosynthates rather than a sink \cite{Turgeon1989}, which makes the senescence gradient centered at the collar leaf rather puzzling.
+If we want to know the effect of leaf position on PSR, this is the developmental framework from which we can start to address the question.
+
+Disentangling the phosphorus starvation response from this autonomous serial senescence gradient is complicated by the close relationship between nutrient status and leaf aging.
+The physiological response to P-limitation can present a paradox: in two of three years of the field study by Plénet et al. (2000), P-deficiency delayed senescence instead of accelerating it \cite{Plenet2000}.
+This maintenance of green leaf area is consistent with lipid remodeling mechanisms described in \textit{Arabidopsis}, where plants aggressively scavenge extraplastidic phospholipids (PC) for remobilization, yet strictly maintain thylakoid phosphatidylglycerol (PG) levels to preserve Photosystem II function \cite{Hagio2000, Kobayashi2009}.
+Consequently, metabolic uncoupling occurs where the absence of visual chlorosis fails to capture the cryptic onset of lipid remobilization, a process further complicated by the natural senescence gradient of the canopy.
+
+In this study, we aimed to understand the physiological and molecular effects of \invfour and to identify candidate genes within the inversion that could elucidate its adaptive role.
+Specifically, we tested whether \invfour-highland contributes to adaptation to low phosphorus availability.
+To achieve this, we backcrossed MICH21, a Mexican highland TV carrying \invfour, into the B73 genetic background for eight generations, generating Near Isogenic Lines (NILs).
+These NILs were grown under temperate field conditions with two phosphorus treatments.
+We profiled the transcriptomic and lipidomic landscape across the vertical canopy profile to distinguish these conserved metabolic scavenging signals from the baseline gradients of phenological aging.
+
+We found the classical response to phosphorus deficiency, where it caused a reduction in plant height, a delay in flowering, and a decrease in total kernel weight across all genotypes.
+Our multi-omics analysis indicates that the metabolic response to this stress was consistent between the \invfour NILs and the B73 control at the molecular and organismic level.
+We did not find a specific interaction between genotype and stress; instead, the molecular response was driven  by the leaf's position on the plantand nutrient limitation .
+Older leaves showed enhanced stress signatures distinct from younger tissues, highlighting the compunding of developmental stage  with the starvation response.
+Ultimately, \invfour did not significantly alter these metabolic pathways, suggesting that its adaptive value in highland environments may stem from its constitutive effects on phenology rather than a specific modification of phosphorus handling.
 For example, the phosphate transporter gene \textit{ZmPho1;2a}, located within \invfour, is a strong candidate for adaptation to low phosphorus availability \cite{salazar-vidal2016-rl, Ma2021-zf}.
-
-In this study, we aimed to understand the physiological and molecular effects of \invfour and to identify candidate genes within the inversion that could elucidate its adaptive role. 
-Specifically, we tested whether \invfour-highland contributes to adaptation to low phosphorus availability. To achieve this, we backcrossed MICH21, a Mexican highland TV carrying \invfour, into the B73 genetic background for eight generations, generating Near Isogenic Lines (NILs). 
-These NILs were grown under temperate field conditions with two phosphorus treatments to evaluate flowering time, height, and transcriptomic responses.
-
-We observed that \invfour significantly reduces flowering time and increases plant height, independent of phosphorus levels. We identified a cluster of JUMONJI methyltransferases, which have higher copy numbers in modern maize compared to highland teosinte and TVs, as potential contributors to flowering time differences. Additionally, we found a group of cell cycle-related genes that may underlie height differences. 
-While classical PSR genes were identified within the inversion, \invfour had no detectable effect on the phosphorus starvation response. 
-These findings provide insights into the genetic mechanisms underlying \invfour’s contribution to local adaptation and highlight potential candidate genes driving its effects.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
