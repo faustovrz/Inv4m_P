@@ -92,7 +92,8 @@
                 singlelinecheck=off,%
                 justification=RaggedRight]{caption}
 \setlength{\columnsep}{24pt} % Distance between the two columns of text
-\setlength{\parindent}{12pt} % Paragraph indent
+\setlength{\parindent}{12pt} % A typical default indentation
+\setlength{\parskip}{0pt}    % No extra vertical space
 
 % Set document color scheme
 \definecolor{black50}{gray}{0.5} % 50% black for hrules
@@ -129,7 +130,7 @@
 
 \fancypagestyle{firststyle}{
    \fancyhead[R]{{\watermarkfont bio\textcolor{color2}{R}$\chi$iv}}
-   \fancyhead[L]{\includegraphics[width=0.8cm]{}}
+   %\fancyhead[L]{\includegraphics[width=0.8cm]{}}
    \fancyfoot[R]{\footnotesize bio\textcolor{color2}{R}$\chi$iv \hspace{1em} \monthyeardate\today \hspace{2em} \thepage\ }
 }
 
@@ -141,7 +142,7 @@
 \rfoot{}
 \fancyfoot[RO,RE]{\thepage\ \hspace{2em} \@runningauthor \hspace{0.2em}}
 \fancyfoot[RO]{\@runningtitle \hspace{2em} \thepage\ }
-\fancyfoot[LO,LE]{\includegraphics[width=0.5cm]{}}
+% \fancyfoot[LO,LE]{\includegraphics[width=0.5cm]{}}
 
 %\fancyfoot[LO,RE]{}
 \renewcommand{\headrulewidth}{0pt}% % No header rule
