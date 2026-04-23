@@ -222,10 +222,33 @@ Crucially, no significant genotype-by-phosphorus interactions were detected for 
 \begin{figure*}[!ht]
 \centering
 \includegraphics[width=\linewidth]{figs/Figure_2.png}
-\caption{\textbf{Ionomic responses of \invfour and control (CTRL) maize lines under phosphorus sufficiency (+P) and deficiency (-P).}
-Boxplots show element concentrations \textbf{(A)} in stover and seeds, and seed/stover ratios \textbf{(B)} for phosphorus (P), zinc (Zn), calcium (Ca), and sulfur (S).
-\textit{t-test FDR} adjusted significance: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), $p < 0.0001$ (****). 
-Effect sizes and exact \textit{p values} are reported in Table.}
+\caption{\textbf{Ionomic responses of \invfour
+   and control (CTRL) maize lines under         
+  phosphorus sufficiency (+P) and deficiency
+  (-P).}                                        
+  Boxplots for phosphorus (P), zinc (Zn),
+  calcium (Ca), and sulfur (S) show, per        
+  genotype, \textbf{(A)} element concentrations
+  (mg/kg) in stover and grain, \textbf{(B)}     
+  grain/stover concentration ratios,
+  \textbf{(C)} per-plant content (mg/plant) in
+  stover and grain, and \textbf{(D)} mineral
+  harvest index (HI, grain/total).
+  Ca concentrations are plotted on a log scale.
+  Brackets show $-$P vs $+$P contrasts within
+  each genotype, computed from \texttt{emmeans} 
+  on the per-response linear model $y \sim
+  \text{Genotype} \times \text{Treatment}$, with
+   Benjamini--Hochberg FDR pooled across all
+  brackets drawn on the figure: $\textit{FDR} <
+  0.05$ (*), $< 0.01$ (**), $< 0.001$ (***), $<
+  0.0001$ (****); non-significant brackets are
+  not shown.
+  Effect sizes and exact \textit{p-values} are
+  reported in Table~\ref{table::ionome}         
+  \emph{(update ref as needed)}.}
+
+  
 \label{fig:Figure_2}
 \end{figure*}
 Nonetheless, we observe a significant $G \times E$ interaction effect for cob diameter, a secondary reproductive trait.
@@ -717,20 +740,44 @@ Any opinions, findings, conclusions, or recommendations expressed in this public
 \centering
 \includegraphics[width=\textwidth]{figs/Figure_S1.png}
 \caption{
+\textbf{Marginal effects of phosphorus deficiency on plant height and kernel traits.}
+Boxplots show individual field plot values for +P and $-$P treatments pooled across CTRL
+and \invfour{} genotypes.
+Brackets show FDR-adjusted p-values for the marginal $\pm$P emmeans contrast
+(Benjamini-Hochberg, pool of 48 contrasts across 16 phenotypes; see Methods).
+\textbf{(A)} Plant height decreased under $-$P.
+\textbf{(B)} Fifty-kernel weight (a proxy for kernel size) decreased significantly
+under phosphorus deficiency.
+\textbf{(C)} Total kernel number showed a marginal increase under $-$P, consistent
+with a kernel size-to-number trade-off that collectively preserved total kernel weight.
+\textbf{(D)} Total kernel weight per plant was statistically unchanged under $-$P,
+indicating that kernel mass per plant was maintained at the expense of individual
+kernel size.
+Significance thresholds: n.s.\ not significant, $p < 0.05$ (*), $p < 0.01$ (**),
+$p < 0.001$ (***), $p < 0.0001$ (****).
+}
+\label{supp:Figure_S1}
+\end{figure*}
+
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figs/Figure_S2.png}
+\caption{
 \textbf{\invfour differences in Anthesis and Plant Height.}
 \textbf{(A)} Days to anthesis. $\invfour$ reached anthesis significantly earlier than CTRL under both phosphorus sufficient (+P) and deficient (-P) conditions.
 \textbf{(B)} Plant height at sampling. $\invfour$ plants were significantly taller than CTRL plants under both +P and -P treatments.
 Yellow boxplots represent CTRL, purple boxplots represent $\invfour$.
 \textit{FDR} adjusted significance: \textit{n.s.} not significant, $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***).
 }
-\label{supp:Figure_S1}
+\label{supp:Figure_S2}
 \end{figure*}
-\pagebreak
 
+\pagebreak
 
 \begin{figure}[!hb]
 \centering
-\includegraphics[width=\textwidth]{figs/Figure_S2.png} % Assuming this is the filename
+\includegraphics[width=\textwidth]{figs/Figure_S3.png} % Assuming this is the filename
 \caption{
 \textbf{Maize Stover Dry Weight Growth Curves and Derived Parameters Highlight Phosphorus-Dependent Effects with No Genotype-by-Environment Interaction.}
 \textbf{(A)} Derived logistic growth parameters for CTRL and \invfour genotypes under +P and -P. 
@@ -739,33 +786,19 @@ Phosphorus deficiency significantly reduced the Area Under the Curve (AUC) for e
 %Furthermore, there were no significant main effects of the \invfour genotype on these stover grotwh parameters.
 \textit{FDR} adjusted \textit{t-test} significance: \textit{n.s.} not significant, $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), $p < 0.0001$ (****).
 }
-\label{supp:Figure_S2} % Label for your figure
+\label{supp:Figure_S3} % Label for your figure
 \end{figure}
 
 \pagebreak
 
 \begin{figure*}[!ht]
 \centering
-\includegraphics[width=\linewidth]{figs/Figure_S3.png}
-\caption{\textbf{Secondary Ionomic responses of \invfour and control maize lines under phosphorus sufficiency (+P) and deficiency (-P).}
-Boxplots show element concentrations \textbf{(A)} in Magnesium (Mg), Manganese (Mn), Potassium (K), and Iron (Fe) in stover and seeds, and Seed/stover ratios \textbf{(B)} for the same four minerals.
+\includegraphics[width=\linewidth]{figs/Figure_S4.png}
+\caption{\textbf{Secondary ionomic responses of \invfour and control (CTRL) maize lines under phosphorus sufficiency (+P) and deficiency ($-$P).}
+Boxplots for magnesium (Mg), manganese (Mn), potassium (K), and iron (Fe) show, per genotype, \textbf{(A)} element concentrations (mg/kg) in stover and grain, \textbf{(B)} grain/stover concentration ratios, \textbf{(C)} per plant content (mg/plant) in stover and grain, and \textbf{(D)} mineral harvest index (HI, grain/total).
 %Phosphorus deficiency ($-P$) caused a significant reduction in seed Mg (A) and seed Mn (B). No significant effects of either phosphorus treatment or the \invfour genotype were detected for K, Fe, or the seed/stover partition ratios (B) for any of the four elements.
-\textit{t-test FDR} adjusted significance: $p < 0.05$ (*), $p < 0.01$ (**), $p < 0.001$ (***), $p < 0.0001$ (****).Â 
-Effect sizes and exact \textit{p values} are reported in Table.}
-\label{supp:Figure_S3}
-\end{figure*}
-
-\pagebreak
-
-\begin{figure*}[!ht]
-\centering
-\includegraphics[width=0.8\linewidth]{figs/Figure_S4.png}
-\caption{
-(\textbf{A}) Euler diagram showing the major two-way intersections among DEGs from the effects of leaf position (Leaf Up/Leaf Down), phosphorus deficiency (-P Up / -P Down), and interaction (Negative and  Positive). Circle sizes represent set sizes, and numbers indicate the counts in each intersection. 
-(\textbf{B}) Upset plot highlighting high-confidence DEG intersections that are significantly enriched relative to expectation (FDR <0.05), the first and second intersections are depicted in A, the third  (Leaf Down $\cap$ -P Down) is not,due to its small size. 
-(\textbf{C}) Summary of high-confidence DEGs and their GO Biological Process (BP) annotation. Black numbers indicate the total number of high-confidence DEGs per group; white numbers denote the subset annotated with significantly enriched BP terms. Neg L$\times$–P: negative Leaf $\times$ –P interaction effect, and Pos L$\times$–P: positive interaction.
-(\textbf{D}) Euler diagram showing overlap among the high-confidence BP annotated DEG sets, illustrating shared and unique functional responses across leaf position, phosphorus deficiency, and their interaction.
-}
+Brackets show $-$P vs $+$P contrasts within each genotype, computed from \texttt{emmeans} on the per response linear model $y \sim \text{Genotype} \times \text{Treatment}$, with Benjamini and Hochberg \textit{FDR} pooled across all brackets drawn on the figure: $\textit{FDR} < 0.05$ (*), $< 0.01$ (**), $< 0.001$ (***), $< 0.0001$ (****); non significant brackets are not shown.
+Effect sizes and exact $p$ values are reported in Table.}
 \label{supp:Figure_S4}
 \end{figure*}
 
@@ -774,6 +807,33 @@ Effect sizes and exact \textit{p values} are reported in Table.}
 \begin{figure*}[!ht]
 \centering
 \includegraphics[width=\linewidth]{figs/Figure_S5.png}
+\caption{\textbf{$\invfour$ effects on the ionome, pooled across phosphorus treatments.}
+For each of five minerals (Mg, Ca, Zn, Fe, K; columns), boxplots contrast control (CTRL) and \invfour plants on four metrics: \textbf{(A)} mineral concentration (mg/kg), \textbf{(B)} grain/stover concentration ratio, \textbf{(C)} per-plant mineral content (mg/plant), and \textbf{(D)} mineral harvest index (HI, grain/total).
+For concentration and content, a single pool is shown per cell — the pool where the \invfour vs CTRL contrast is significant under the unified FDR, or \textit{stover} when neither pool is significant — and the selected pool is indicated on the facet strip.
+Brackets correspond to the \invfour $-$ CTRL contrast from \texttt{emmeans} on the per-response linear model $y \sim \text{Genotype} \times \text{Treatment}$, pooled across phosphorus treatments, with Benjamini--Hochberg \textit{FDR} applied once across all 20 cells: $\textit{FDR} < 0.05$ (*), $< 0.01$ (**), $< 0.001$ (***), $< 0.0001$ (****); non-significant brackets are not drawn.}
+\label{supp:Figure_S5}
+\end{figure*}
+
+\clearpage
+
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=0.8\linewidth]{figs/Figure_S6.png}
+\caption{
+(\textbf{A}) Euler diagram showing the major two-way intersections among DEGs from the effects of leaf position (Leaf Up/Leaf Down), phosphorus deficiency (-P Up / -P Down), and interaction (Negative and  Positive). Circle sizes represent set sizes, and numbers indicate the counts in each intersection. 
+(\textbf{B}) Upset plot highlighting high-confidence DEG intersections that are significantly enriched relative to expectation (FDR <0.05), the first and second intersections are depicted in A, the third  (Leaf Down $\cap$ -P Down) is not, due to its small size. 
+(\textbf{C}) Summary of high-confidence DEGs and their GO Biological Process (BP) annotation. Black numbers indicate the total number of high-confidence DEGs per group; white numbers denote the subset annotated with significantly enriched BP terms. Neg L$\times$–P: negative Leaf $\times$ –P interaction effect, and Pos L$\times$–P: positive interaction.
+(\textbf{D}) Euler diagram showing overlap among the high-confidence BP annotated DEG sets, illustrating shared and unique functional responses across leaf position, phosphorus deficiency, and their interaction.
+}
+\label{supp:Figure_S6}
+\end{figure*}
+
+\pagebreak
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=\linewidth]{figs/Figure_S7.png}
 \caption{
 (\textbf{A}) \textbf{Manhattan plot for differentially expressed genes (DEGs) under $-\text{P}$}. 
 %A total of $\textbf{10,606}$ DEGs were identified for the main effect of P deficiency. 
@@ -784,7 +844,7 @@ Loci associated with key P-starvation response genes, such as $\textit{pilncr1}$
 (\textbf{D}) Volcano plot for differentially abundant lipids (DALs) under Leaf $\mathbf{\times} -\mathbf{P}$ interaction. 
 %Only two lipids, $\textbf{PC34:2}$ and $\textbf{TG:54:9}$, are identified as significantly differentially abundant, showing a significant interaction between leaf developmental stage and P deficiency treatment. 
 }
-\label{supp:Figure_S5}
+\label{supp:Figure_S7}
 \end{figure*}
 
 \pagebreak
@@ -792,7 +852,7 @@ Loci associated with key P-starvation response genes, such as $\textit{pilncr1}$
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\linewidth]{figs/Figure_S6.png}
+\includegraphics[width=\linewidth]{figs/Figure_S8.png}
 \caption{
 \textbf{Lipid class composition, and effect of leaf developmental stages and phosphorus treatments.} of
 \textbf{(A)} Membrane lipid composition (Ion \%, log scale) is dominated by PC, MGDG, DGDG, and SQDG, while LPE, PI and DGGA (in +P) represent minor components (<1\%, necessitating log scale). 
@@ -803,14 +863,14 @@ Loci associated with key P-starvation response genes, such as $\textit{pilncr1}$
 %The general trend of increased glycoglycerolipids and decreased phosphoglycerolipids under -P appears additive to developmental effects.
 Error bars indicate standard error of the mean.
 }
-\label{supp:Figure_S6}
+\label{supp:Figure_S8}
 \end{figure}
 
 \pagebreak
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\linewidth]{figs/Figure_S7.png}
+\includegraphics[width=\linewidth]{figs/Figure_S9.png}
 \caption{
 \textbf{Mass spectrometry injection order confounds lipid profile variation.}
 \textbf{(A)} Multidimensional scaling (MDS) of lipid profiles. 
@@ -823,7 +883,7 @@ The injection order was used as a covariate in the \textit{limma} mixed linear m
 %There is no  obvious sample clustering by genotype (bottom left),
 %collection time (middle left), or batch effects between collectors (top right), 
 }
-\label{supp:Figure_S7}
+\label{supp:Figure_S9}
 \end{figure}
 
 \begin{table}[h!]
