@@ -86,7 +86,6 @@ Additionally, we observed a phosphorus modulated transcriptional gradient from t
 Although the magnitude of the phosphorus response increased with leaf age, we did not observe significant interactions with \invfour. Nonetheless, a small number of genotype-by-phosphorus interactions (three genes, all outside inversion boundaries) exceed statistical thresholds, likely reflecting residual flanking introgression rather than \invfour effects \textit{per se}. These exceptions may be linked to phenotypic variation in height and flowering, which is dependent on the \invfour karyotype. Our results highlight the robustness of P starvation responses across inverted and non-inverted \invfour genotypes and provide an entry point for dissecting outlier interactions of potential adaptive significance. 
 \end{abstract}
 
-% (todo: (Fausto) maybe integrate the gradient point?)
 % Adaptation of maize (Zea mays L.) to the Mexican highlands is driven by introgression from wild teosinte (Zea mays ssp. mexicana), most notably through the chromosomal inversion $\invfour$.
 % While $\invfour$ is strongly associated with clinal variation in flowering time, its potential role in adaptation to the phosphorus-fixing Andosols of the highlands remains unresolved. We evaluated the physiological and molecular impact of $\invfour$ using Near Isogenic Lines (NILs) grown under phosphorus-limiting field conditions.
 % Phenotypic data showed that phosphorus deficiency reduced plant height and total kernel weight across all genotypes, while $\invfour$ exerted a constitutive effect on flowering time and height independent of nutrient status.
@@ -206,7 +205,7 @@ Ultimately, \invfour did not significantly alter these metabolic pathways, sugge
 
 \subsection*{Phosphorus starvation has strong maize phenotypic effects independent of \invfour}
 
-Phosphorus deficiency delayed flowering, reduced biomass, and decreased yield  (Fig~\ref{fig:Figure_1}) in both control (CTRL) and  \invfour lines.
+Phosphorus deficiency delayed flowering, reduced biomass, and decreased yield (Fig~\ref{fig:Figure_1}) in sibling NILs homozygous for the B73 reference (CTRL) and \invfour-MICH21 karyotypes alike.
 Under $-P$ conditions, anthesis and silking occurred more than three days later relative to $+P$ (Fig~\ref{fig:Figure_1}A and B; anthesis: $3.60 \pm 0.26$~days, FDR $= 1.1 \times 10^{-18}$; silking: $3.42 \pm 0.23$~days, FDR $= 8.1 \times 10^{-20}$; marginal effect estimate $\pm$ S.E, FDR adjusted across the 144-test phenotype family).
 In reduced phosphorus, the 50-kernel weight decreased by nearly $18\%$ ($-1.86 \pm 0.37$~g, FDR $= 4.1 \times 10^{-5}$, Fig~\ref{fig:Figure_1}C).
 Under $-$P, 50-kernel weight decreased in both CTRL ($-1.80$~g, FDR $= 0.005$) and \invfour ($-1.92$~g, FDR $= 0.002$) plants, total kernel weight per plant remained statistically unchanged in either genotype, and total kernel number increased only in the marginal contrast pooled over genotype ($+58.7$, FDR $= 0.044$; \ref{supp:Figure_S1}).
@@ -307,7 +306,7 @@ The axes and thresholds are analogous to those in panel B, highlighting lipids w
 \end{figure*}
 
 This includes $\textit{peamt2}$ (\textit{Zm00001eb294690}, $-\log_{10}{FDR}=4.93$, $log_2{FC}=-6.81$), a phosphoethanolamine $\text{N}$-methyltransferase involved in phospholipid biosynthesis.
-Furthermore, the photosynthetic machinery was repressed, indicated by the downregulation of $\textit{rca3}$ ($-\log_{10}{FDR}=3.8$, $log_2{FC}=-3.40$), which encodes $\textit{RUBISCO}$ activase, reflecting a $\text{P}$-deficiency-induced reduction in carbon fixation capacity.
+Furthermore, downregulated genes consistent with reduced photosynthetic activity included light harvesting components such as \textit{lhcb10}, and the stress responsive RUBISCO activase \textit{rca3} ($-\log_{10}{FDR}=3.8$, $\log_2{FC}=-3.40$).
 This systemic reduction in photosynthesis is also supported by the over-representation of the photosynthetic antenna proteins in $\text{KEGG}$, exemplified by the downregulation of the \textit{light harvesting chlorophyll a/b binding protein10} gene ($\textit{lhcb10}$) (Fig~\ref{fig:Figure_4}B).
 Sulfur metabolism was also affected: the chromosome 9 cysteine synthase gene cluster (\textit{cys3}/\textit{cys4}/\textit{cys8}, \textit{Zm00001eb376930}) was strongly repressed ($-\log_{10}{\text{FDR}} = 3.23$, $\log_2{\text{FC}} = -1.85$), driving the over-representation of the KEGG Sulfur cycle pathway (zma01320, adj.\,$P = 0.023$) among $-$P downregulated genes (Fig~\ref{fig:Figure_4}B).
 
@@ -336,7 +335,7 @@ This widespread reduction in other phosphorus-rich membrane lipids is also seen 
 \centering
 \includegraphics[width=\linewidth]{figs/Figure_5.png}
 \caption{\textbf{The response to phosphorus starvation increases with leaf stage and is positively correlated with indicators of leaf senescence }.
-(\textbf{A}) Gene Set Transcription Indices Across Leaf Stages. Indices are calculated as the mean $\log_{10}(\text{CPM})$ for genes within defined sets and normalized across the four leaf stages to represent the proportion of the total expression range. The left panel shows Chlorophyll Synthesis (dark green) and Chlorophyll Degradation (light green/orange) sets derived from CornCyc/KEGG. 
+(\textbf{A}) Gene Set Transcription Indices Across Leaf Stages. Indices are calculated as the mean $\log_{10}(\text{CPM})$ for genes within defined sets and normalized across the four leaf stages to represent the proportion of the total expression range. The left panel shows Chlorophyll Synthesis (dark green) and Chlorophyll Degradation (light green/orange) sets derived from CornCyc/KEGG; the right panel shows Photosynthesis (dark green) and Leaf Senescence (orange) sets from \cite{ojedarivera2026}.
 %Chlorophyll Synthesis shows a significant negative correlation with age ($r = -0.78$, $p = 6.3\times 10^{-10}$), while Chlorophyll Degradation shows a positive correlation ($r = 0.53$, $p = 2.5\times 10^{-4}$). The right panel shows Photosynthesis (dark green) and Leaf Senescence (orange) sets from GO. Photosynthesis shows a significant negative correlation ($r = -0.76$, $p = 2.6\times 10^{-9}$), and Leaf Senescence shows a significant positive correlation ($r = 0.77$, $p = 1.2\times 10^{-9}$)). Error bars represent the standard error of the mean (SEM).
 (\textbf{B}) Expression profiles ($\log_{10}(\text{CPM})$) for representative gene pairs illustrating opposing trends across leaf stages. 
 %\textit{pep1} (phosphoenolpyruvate carboxylase, green) and \textit{ssu1} (ribulose bisphosphate carboxylase small subunit 1, green) decline as senescence-associated genes like \textit{Salt homolog 1} (orange), \textit{mir3} (\textit{maize insect resistance 3}, orange), and \textit{nactf108} (\textit{NAC transcription factor 108 / ORE1}) increase. \textit{sgrl1} and \textit{nye2} are STAY-GREEN homologs that exhibit opposing expression trends, despite similar annotated functions. 
@@ -397,15 +396,16 @@ The significant interaction terms we observed for chlorophyll metabolism, photos
 
 Phosphorus deficiency activated the expected molecular machinery for nutrient scavenging and remobilization.
 Upregulated genes included non-coding RNAs \textit{pilncr1} and \textit{ips1}, phosphate scavenging enzymes \textit{gpx1}, \textit{pap2} (\textit{Zm00001eb064450}), and \textit{pap19}, phosphate transporters \textit{phos1}, \textit{pht1}, and \textit{pht7}, and galactolipid biosynthesis genes \textit{mgd2}, \textit{sqd2} (\textit{Zm00001eb297970}), \textit{sqd3} (\textit{Zm00001eb335670}), and \textit{glpx2}.
-Gene Ontology enrichment confirmed activation of galactolipid biosynthetic processes and phosphate starvation response pathways, while KEGG analysis highlighted glycerophospholipid metabolism (Fig~\ref{fig:Figure_4} A-B). 
-Downregulated genes included \textit{peamt2} (\textit{Zm00001eb294690}), which catalyzes phosphoethanolamine methylation in the Kennedy pathway for PC biosynthesis, photosynthesis genes \textit{rca3} (\textit{Zm00001eb164380}) and \textit{lhcb10} (\textit{Zm00001eb357740}), and transcription factors \textit{zim25} (\textit{Zm00001eb278320}), \textit{nactf132} (\textit{Zm00001eb324550}), and \textit{bzip81} (\textit{Zm00001eb198410}).
+Gene Ontology enrichment confirmed activation of galactolipid biosynthetic processes and phosphate starvation response pathways, while KEGG analysis highlighted glycerophospholipid metabolism (Fig~\ref{fig:Figure_4} A-B).
+Concurrent with this phospholipid to galactolipid swap, transcriptome data show induction of \textit{pah1} (phosphatidate phosphatase, $\log_2{\text{FC}}=+1.30$) and \textit{dgk6} (diacylglycerol kinase, $\log_2{\text{FC}}=+0.46$), which produce the diacylglycerol substrate for galactolipid synthesis, alongside repression of phospholipase D paralogs (\textit{pld10}, \textit{pld13}, \textit{pld15}) and a chloroplastic Phospholipase A1.
+Downregulated genes included \textit{peamt2} (\textit{Zm00001eb294690}), which catalyzes phosphoethanolamine methylation in the Kennedy pathway for PC biosynthesis, the light harvesting gene \textit{lhcb10} (\textit{Zm00001eb357740}) and the stress responsive RUBISCO activase \textit{rca3} (\textit{Zm00001eb164380}), and transcription factors \textit{zim25} (\textit{Zm00001eb278320}), \textit{nactf132} (\textit{Zm00001eb324550}), and \textit{bzip81} (\textit{Zm00001eb198410}).
 These patterns validate the canonical phosphorus starvation response documented in previous studies \cite{wang2020a,he2022}.
 
 We detected 555 strong DEGs with a significant and strong interaction between leaf stage and phosphorus treatment Fig~\ref{fig:Figure_4}A-B, meaning that their phosphorus responses increased or decreased linearly with leaf position.
 Our statistical modelling was designed to detect two functionally distinct trajectories.
-Genes with negative interaction terms (194), including light-harvesting proteins \textit{cab}, \textit{psad1}, and \textit{ndho1}, showed increased negative responses to phosphorus starvation in older leaves, corresponding to selective shutdown of the thylakoid light-capture machinery.
-Gene Ontology enrichment for this set highlighted terms related to photosynthesis and the light-harvesting complex, and KEGG analysis identified both Photosynthesis -- antenna proteins (zma00196) and Carbon fixation by Calvin cycle (zma00710) as strongly enriched in the Leaf:$-$P downregulated cluster, with both pathways gaining substantially more DEGs in the interaction cluster than in the $-$P main effect cluster (Fig~\ref{fig:Figure_4}A-B).
-Both light-harvesting and carbon-fixation capacity are therefore progressively shut down in older leaves under phosphorus limitation, pointing to a coordinated decommissioning of the photosynthetic machinery rather than a split between components that are uniformly regulated across leaf stages and components whose regulation is amplified with leaf age.
+Genes with negative interaction terms (194), including light harvesting proteins \textit{cab}, \textit{psad1}, and \textit{ndho1}, showed increased negative responses to phosphorus starvation in older leaves, corresponding to selective shutdown of the thylakoid light-capture machinery.
+Gene Ontology enrichment for this set highlighted terms related to photosynthesis and the light harvesting complex, and KEGG analysis identified both Photosynthesis -- antenna proteins (zma00196) and Carbon fixation by Calvin cycle (zma00710) as strongly enriched in the Leaf:$-$P downregulated cluster, with both pathways gaining substantially more DEGs in the interaction cluster than in the $-$P main effect cluster (Fig~\ref{fig:Figure_4}A-B).
+Both light harvesting and carbon-fixation capacity are therefore progressively shut down in older leaves under phosphorus limitation, pointing to a coordinated decommissioning of the photosynthetic machinery rather than a split between components that are uniformly regulated across leaf stages and components whose regulation is amplified with leaf age.
 
 Genes with positive interaction terms (Fig~\ref{fig:Figure_4}A-B) i.e. with increased slope of $log_2{\text{FC}}>0.5$ per leaf stage under phosphorus limitation, showed amplified phosphorus-starvation responses in older leaves, corresponding to enhanced senescence and nutrient remobilization signatures.
 Out of 361 strong DEGs with positive interaction with leaf age, 20 genes were annotated with "cellular response to phosphate starvation" and presented in the \ref{table:goleafxP_genes}.
@@ -494,12 +494,11 @@ This interaction extends to \textit{csap} (\textit{Zm00001eb402430}, \textit{chl
 We identified 24 genes within this Leaf $\times$ $-$P interaction term that reveal potential functional specialization. 
 Three hub genes, \textit{rns}, \textit{mybr105} (\textit{Zm00001eb081290}, a protein-binding MYB), and \textit{lkrsdh1} (\textit{Zm00001eb192910}) (involved in lysine catabolism), appear central to these nutrient salvage operations, while transport genes (e.g., the carbohydrate transporter \textit{sweet2} (\textit{Zm00001eb342040}) and \textit{ppt1} (\textit{Zm00001eb097690}) and cell wall remodeling enzymes, \textit{aga2} (\textit{Zm00001eb281720}) and \textit{irx15} (\textit{Zm00001eb068410}),  are upregulated, consistent with nutrient remobilization.
 
-To map the regulatory architecture governing these processes, we compiled a list of SAGs by cross-referencing our strong DEGs with manually curated sources \cite{zhang2014c,liu2011,ojeda2026,berardini2015,durinck2005}, resulting in a total of 110 genes (\nameref{S1_File}). 
+To map the regulatory architecture governing these processes, we compiled a list of SAGs by cross-referencing our strong DEGs with manually curated sources \cite{zhang2014c,liu2011,ojedarivera2026,berardini2015,durinck2005}, resulting in a total of 110 genes (\nameref{S1_File}). 
 Almost half of these, 53, were transcription factors. 
 They are distributed across 13 families, with the NAC (16 members), WRKY (7), G2-like (5), AP2-EREBP (5), MYB (5), and bHLH (5) families representing the dominant regulatory nodes. 
 Within the NAC family, we observed complex, context-dependent expression patterns. 
-While typical senescence regulators like \textit{nactf108} and \textit{nactf44} (\textit{Zm00001eb015630}) consistently increase with leaf age, \textit{nactf132} (\textit{Zm00001eb324550}, \textit{ZmNAC132}) shows opposing responses: strong downregulation under phosphorus stress but upregulation with leaf age progression. 
-% todo:(fausto) check if nac44 has the same pattern as nac132, upregulation with leaf stage
+Typical senescence regulators like \textit{nactf108} and \textit{nactf44} (\textit{Zm00001eb015630}) consistently increase with leaf age, and \textit{nactf132} (\textit{Zm00001eb324550}, \textit{ZmNAC132}) shares this leaf-age upregulation while also showing strong downregulation under phosphorus stress.
 This divergence is particularly noteworthy because \textit{nactf132} has been linked to chlorophyll content regulation through \textit{nye1} activation \cite{yuan2023}, and natural variation in its 5$'$UTR associates with chlorophyll B levels~\cite{wallace2014a}. 
 The contrasting responses suggest that developmental senescence and nutrient-stress-amplified senescence might engage partially distinct regulatory networks despite converging on common downstream targets.
 
@@ -533,6 +532,7 @@ Calcium and magnesium showed smaller shifts; grain calcium concentrations in mod
 
 The transcriptional data recover the sulfolipid arm of this crosstalk, with \textit{sqd1}, \textit{sqd2} and \textit{sqd3} among the strongest $-$P upregulated genes, consistent with SQDG biosynthesis upregulation seen across maize genotypes \citep{he2022}.
 The chromosome 9 cysteine synthase gene cluster (\textit{cys3}/\textit{cys4}/\textit{cys8} at \textit{Zm00001eb376930}, and the adjacent \textit{cys7}) is repressed under $-$P with the repression deepening in older leaves (Leaf$\times -$P interaction), and the Sulfur cycle pathway (KEGG zma01320) is overrepresented in both the $-$P and Leaf:$-$P downregulated clusters at this locus.
+The cys3/cys4 product physically interacts with the E3 ubiquitin ligase NLA in yeast two-hybrid assays \citep{liao2026}, a regulator of phosphate homeostasis that drives ubiquitination and turnover of PHT1 transporters together with the E2 conjugating enzyme PHO2 \citep{huang2013}, raising the possibility of a post-translational link between cysteine biosynthesis and Pi transporter regulation beyond the transcriptional repression observed here.
 Downstream glutathione machinery moves in the opposite direction: $\gamma$-glutamylcysteine synthetase \textit{gsh1} is a Leaf$\times -$P upregulated gene, and Glutathione metabolism (KEGG zma00480, adj.\,$p = 3.5 \times 10^{-4}$) together with the glutathione metabolic process (GO:0006749) are enriched among Leaf:$-$P upregulated genes, driven by a panel of glutathione S-transferases.
 In older $-$P leaves, the transcriptional program for sulfolipid biosynthesis (\textit{sqd1}, \textit{sqd2}, \textit{sqd3}) is induced and the glutathione utilization machinery is progressively amplified, while new cysteine synthesis at the dominant chromosome 9 locus is reduced.
 
@@ -554,7 +554,7 @@ The \invfour phenotypic effects on flowering time, plant height, and related tra
 \section*{Conclusion}
 
 Our multi-omics analysis reveals that the maize phosphorus starvation response is influenced by the leaf developmental stage during the vegetative phase, with older leaves positioned below the collar exhibiting enhanced stress responses characteristic of developmental senescence, which integrate nutrient limitation with natural developmental progression.
-The bifurcation of molecular responses into light-harvesting shutdown and senescence acceleration shows coordinated regulation of functionally distinct pathways.
+The bifurcation of molecular responses into light harvesting shutdown and senescence acceleration shows coordinated regulation of functionally distinct pathways.
 Lipidomic patterns parallel transcriptomic responses, with age-dependent amplification of phospholipid degradation, galactolipid accumulation, and triacylglycerol synthesis.
 The divergence of lysophosphatidylethanolamine patterns from 16:3 plant models highlights the importance of lipid metabolism architecture differences between 16:3 and 18:3 plant species.
 Despite this strong developmental dependency, the \invfour chromosomal inversion does not substantially modulate phosphorus starvation responses, indicating that its contribution to highland adaptation operates through constitutive effects on developmental timing rather than enhanced nutrient stress tolerance.
@@ -700,13 +700,10 @@ Similarly, we tested for KEGG pathway overrepresentation using the \textit{enric
 Both types of overrepresentation analysis were plotted with the package \textit{DOSE} \cite{yu2015}.
 
 \subsection*{Gene Set Transcriptomic Indices}
-% The chlorophyll degradation list was manually curated from CornCyc.
-% Many (6) genes that were in WEi2025 were missing from the corncyc pathways
-% even if the reaction was present, I sent an email asking for the addition of these genes based on manual curation, mainly Wei2025.
-% The chlorophyll synthesis list is about 35 genes. I can add the table or just cite the pathways in corncyc (most economical), no further manual curation was needed
-% Senesce and Photosynthesysis lists were superseded by Ojeda2026 I need his input about how to cite/describe them.
-% todo: (fausto) add the tables and references, and correct the results and discussion correspondingly
-To visualize developmental and stress-induced changes in major biological processes, we calculated transcriptomic indices for four gene sets. Chlorophyll Synthesis and Chlorophyll Degradation gene sets were obtained from CornCyc pathways and KEGG annotations. Photosynthesis and Leaf Senescence gene sets were obtained from Gene Ontology biological process terms using the B73 NAM v5 annotation. 
+To visualize developmental and stress-induced changes in major biological processes, we calculated transcriptomic indices for four gene sets.
+The Chlorophyll Synthesis set was compiled from CornCyc pathway annotations.
+The Chlorophyll Degradation set was manually curated from the same CornCyc reactions, supplemented with six additional genes drawn from KEGG and \cite{wei2025} that mediate canonical chlorophyll catabolism in maize but were missing from the CornCyc reaction set.
+The Photosynthesis (163 genes) and Leaf Senescence (55 genes) sets were taken from \cite{ojedarivera2026}, who curated panicoid grass orthologs of canonical photosynthesis and senescence regulators.
 
 For each gene set, we calculated the mean $\log_{10}(\text{CPM})$ across all genes in the set for each sample. 
 Index values were then normalized to represent the proportion of the total expression range across the four leaf stages using the formula:
